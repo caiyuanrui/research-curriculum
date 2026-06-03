@@ -1,0 +1,72 @@
+{
+  "course": "diffusion-course",
+  "display_name": "Diffusion Course",
+  "current_topic_index": 0,
+  "current_topic": "Score Matching",
+  "current_topic_phase": "classic",
+  "paper_list": [
+    {
+      "title": "Estimation of Non-Normalized Statistical Models by Score Matching",
+      "authors": "Aapo Hyvärinen",
+      "year": 2005,
+      "venue": "Journal of Machine Learning Research",
+      "link": "https://www.jmlr.org/papers/v6/hyvarinen05a.html",
+      "status": "done",
+      "order": 0
+    },
+    {
+      "title": "A Connection Between Score Matching and Denoising Autoencoders",
+      "authors": "Pascal Vincent",
+      "year": 2011,
+      "venue": "Neural Computation",
+      "link": "https://doi.org/10.1162/NECO_a_00142",
+      "status": "done",
+      "order": 1
+    },
+    {
+      "title": "Generalized Denoising Auto-Encoders as Generative Models",
+      "authors": "Yoshua Bengio, Li Yao, Guillaume Alain, Pascal Vincent",
+      "year": 2013,
+      "venue": "NeurIPS",
+      "link": "https://arxiv.org/abs/1305.6663",
+      "status": "unread",
+      "order": 2
+    },
+    {
+      "title": "Denoising Autoencoders are Score-Matching Models",
+      "authors": "Guillaume Alain, Yoshua Bengio",
+      "year": 2014,
+      "venue": "ICLR Workshop",
+      "link": "https://www.semanticscholar.org/paper/What-Regularized-Auto-Encoders-Learn-from-the-Who-Alain-Bengio/",
+      "status": "unread",
+      "order": 3
+    },
+    {
+      "title": "Sliced Score Matching: A Scalable Approach to Density and Score Estimation",
+      "authors": "Yang Song, Sahaj Garg, Jiaxin Shi, Stefano Ermon",
+      "year": 2019,
+      "venue": "NeurIPS",
+      "link": "https://arxiv.org/abs/1905.07088",
+      "status": "unread",
+      "order": 4
+    }
+  ],
+  "completed": [
+    {
+      "title": "Estimation of Non-Normalized Statistical Models by Score Matching",
+      "authors": "Aapo Hyvärinen",
+      "year": 2005,
+      "read_at": "2026-06-03"
+    },
+    {
+      "title": "A Connection Between Score Matching and Denoising Autoencoders",
+      "authors": "Pascal Vincent",
+      "year": 2011,
+      "read_at": "2026-06-03"
+    }
+  ],
+  "total_papers_read": 2,
+  "current_paper_index": 2,
+  "created_at": "2026-06-03",
+  "updated_at": "2026-06-03"
+}

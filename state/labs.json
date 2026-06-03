@@ -1,0 +1,21 @@
+{
+  "course": "lab-reports-course",
+  "display_name": "Lab Reports Course",
+  "mode": "lab_monitor",
+  "current_lab_index": 0,
+  "current_lab": "OpenAI",
+  "current_topic_phase": "awaiting_discovery",
+  "paper_list": [],
+  "completed": [],
+  "labs": {
+    "OpenAI": {"last_checked": null, "read_reports": []},
+    "Anthropic": {"last_checked": null, "read_reports": []},
+    "DeepSeek": {"last_checked": null, "read_reports": []},
+    "Thinking Machines Lab": {"last_checked": null, "read_reports": []},
+    "Google DeepMind": {"last_checked": null, "read_reports": []},
+    "Meta AI": {"last_checked": null, "read_reports": []}
+  },
+  "total_papers_read": 0,
+  "created_at": "2026-06-03",
+  "updated_at": "2026-06-03"
+}
