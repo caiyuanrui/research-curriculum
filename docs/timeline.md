@@ -2,13 +2,7 @@
 
 按时间线汇总所有已读论文。
 
-```mermaid
-gantt
-    title Research Timeline
-    dateFormat  YYYY-MM-DD
-    axisFormat  %Y
-
-    section Diffusion
-    Score Matching (Hyvärinen)           :2005-01-01, 2005-12-31
-    Score Matching ↔ DAE (Vincent)       :2011-01-01, 2011-12-31
-```
+| Date | Course | Paper | Year |
+|------|--------|-------|------|
+| 2026-06-03 | diffusion | [Estimation of Non-Normalized Statistical Models by Score Matching](diffusion/001-score-matching-hyvarinen-2005.md) | 2005 |
+| 2026-06-03 | diffusion | [A Connection Between Score Matching and Denoising Autoencoders](diffusion/002-vincent-2011.md) | 2011 |
