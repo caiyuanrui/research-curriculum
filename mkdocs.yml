@@ -1,0 +1,64 @@
+site_name: Research Curriculum
+site_description: 系统性的研究学习笔记 — 每日一篇论文，追踪 AI 各领域发展脉络
+site_url: https://caiyuanrui.github.io/research-curriculum
+repo_url: https://github.com/caiyuanrui/research-curriculum
+edit_uri: blob/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - content.code.copy
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: 切换到亮色模式
+    - scheme: default
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到暗色模式
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - footnotes
+  - attr_list
+  - md_in_html
+
+nav:
+  - Home: index.md
+  - Agent Course:
+    - agent/index.md
+  - OOD Course:
+    - ood/index.md
+  - Diffusion Course:
+    - diffusion/index.md
+  - LLM Systems:
+    - systems/index.md
+  - Lab Reports:
+    - labs/index.md
+  - Weekly Review:
+    - weekly-review/index.md
+  - Timeline: timeline.md
+  - Knowledge Graph: knowledge-graph.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/caiyuanrui/research-curriculum
+
+copyright: Copyright &copy; 2026 Research Curriculum
