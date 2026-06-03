@@ -47,6 +47,8 @@ nav:
     - ood/index.md
   - Diffusion Course:
     - diffusion/index.md
+    - "001: Score Matching (Hyvarinen 2005)": diffusion/001-score-matching-hyvarinen-2005.md
+    - "002: DAE to SM Connection (Vincent 2011)": diffusion/002-vincent-2011.md
   - LLM Systems:
     - systems/index.md
   - Lab Reports:
