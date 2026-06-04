@@ -266,13 +266,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../ood/" class="md-tabs__link">
+        <a href="../../multimodal/" class="md-tabs__link">
           
   
   
     
   
-  OOD Course
+  Multimodal Course
 
         </a>
       </li>
@@ -579,14 +579,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ood/" class="md-nav__link ">
+            <a href="../../multimodal/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    OOD Course
+    Multimodal Course
   
 
     
@@ -603,7 +603,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    OOD Course
+    Multimodal Course
   
 
           </label>
@@ -1256,15 +1256,15 @@
 <p>Vincent proved that a <strong>denoising autoencoder trained with squared error and Gaussian corruption is implicitly performing score matching</strong>. Specifically:</p>
 <p>Let p̃_σ(x̃|x) = N(x̃; x, σ²I) be the corruption process, and let q_σ(x̃) = ∫ p_data(x) · p̃_σ(x̃|x) dx be the corrupted data distribution (a Parzen density estimate). The DAE learns a reconstruction function r_θ(x̃) that minimizes E[ ‖r_θ(x̃) − x‖² ].</p>
 <p>Vincent showed that the optimal reconstruction function r*(x̃) satisfies:</p>
-<p>$$
+<div class="arithmatex">\[
 r^*(x̃) − x̃ = σ² · ∇_{x̃} log q_σ(x̃)
-$$</p>
+\]</div>
 <p>That is, <strong>the residual of the optimal denoising autoencoder (the difference between reconstruction and input) is exactly proportional to the score of the Parzen density estimate</strong>. Since score matching aims to match the model's score to ∇ log q(x), and DAEs learn exactly this quantity at the optimal point, the DAE training criterion is equivalent to score matching.</p>
 <p><strong>Why does it work?</strong></p>
 <p>The key insight is that adding small Gaussian noise makes the data distribution smooth and differentiable, allowing the score to be well-defined everywhere. Under Gaussian corruption, Bayes' rule gives:</p>
-<p>$$
+<div class="arithmatex">\[
 r^*(x̃) = x̃ + σ² · ∇_{x̃} log q_σ(x̃)
-$$</p>
+\]</div>
 <p>This means the DAE's reconstruction direction is the score direction — pointing toward higher data density. The DAE learns the vector field that pushes corrupted samples back toward the data manifold, which is exactly the gradient of the log-density. This is sometimes called <strong>denoising score matching</strong> or <strong>implicit score matching</strong>.</p>
 <p>The beauty is that this requires no second derivatives — just the standard DAE squared-error loss, which is O(1) per sample in the input dimension. The Hessian trace bottleneck of classical score matching is entirely bypassed.</p>
 <h2 id="impact">🔗 Impact</h2>
@@ -1318,9 +1318,9 @@ $$</p>
 <h2 id="deep-exploration">🔬 Deep Exploration</h2>
 <p><strong>Tweedie's Formula and the DAE Score Connection.</strong></p>
 <p>Tweedie's formula, a classical result from statistics (Efron, 2011), provides a deep mathematical lens for understanding Vincent's DAE-score connection. For a random variable X with an exponential family distribution, the posterior expectation given a noisy observation X̃ = X + ε (with ε ~ N(0, σ²I)) is:</p>
-<p>$$
+<div class="arithmatex">\[
 E[X | X̃ = x̃] = x̃ + σ² · ∇_{x̃} log p_σ(x̃)
-$$</p>
+\]</div>
 <p>where p_σ is the density of the noisy observations. This is exactly the equation Vincent derived for the optimal DAE reconstruction! Tweedie's formula explains why:
 - The DAE reconstruction residual (r*(x̃) − x̃) equals σ² times the score of the noisy data distribution
 - This holds for any distribution of X, as long as p_σ is well-defined and differentiable
@@ -1409,6 +1409,8 @@ $$</p>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

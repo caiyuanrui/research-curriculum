@@ -28,6 +28,8 @@ theme:
         name: 切换到暗色模式
 
 markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.superfences
@@ -38,6 +40,9 @@ markdown_extensions:
   - footnotes
   - attr_list
   - md_in_html
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
   - Home: index.md

@@ -264,13 +264,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="../ood/" class="md-tabs__link">
+        <a href="../multimodal/" class="md-tabs__link">
           
   
   
     
   
-  OOD Course
+  Multimodal Course
 
         </a>
       </li>
@@ -577,14 +577,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../ood/" class="md-nav__link ">
+            <a href="../multimodal/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    OOD Course
+    Multimodal Course
   
 
     
@@ -601,7 +601,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    OOD Course
+    Multimodal Course
   
 
           </label>
@@ -1051,10 +1051,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#concepts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        概念索引
+        Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diffusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        diffusion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-course-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-Course Connections
       
     </span>
   </a>
@@ -1096,10 +1124,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#concepts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        概念索引
+        Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diffusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        diffusion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-course-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-Course Connections
       
     </span>
   </a>
@@ -1128,33 +1184,22 @@
 
 <h1 id="knowledge-graph">Knowledge Graph</h1>
 <p>概念关系图——跨课程的知识关联。</p>
+<h2 id="concepts">Concepts</h2>
+<h3 id="diffusion">diffusion</h3>
+<ul>
+<li><strong>Score Function</strong> (<a href="../diffusion/001-score-matching-hyvarinen-2005/">Hyvärinen 2005</a>) — Gradient of log-density; key concept for training unnormalized models</li>
+<li><strong>Score Matching</strong> (<a href="../diffusion/001-score-matching-hyvarinen-2005/">Hyvärinen 2005</a>) — Training objective that matches model score to data score</li>
+<li><strong>Denoising Autoencoder</strong> (<a href="../diffusion/002-vincent-2011/">Vincent 2011</a>) — Neural network that learns to reconstruct clean input from corrupted input</li>
+<li><strong>Denoising Score Matching</strong> (<a href="../diffusion/002-vincent-2011/">Vincent 2011</a>) — Equivalence between DAE reconstruction and score estimation</li>
+<li><strong>Tweedie's Formula</strong> (<a href="../diffusion/002-vincent-2011/">Vincent 2011</a>) — Statistical identity connecting posterior expectation and score</li>
+</ul>
+<h2 id="cross-course-connections">Cross-Course Connections</h2>
+<p><em>(Will be populated on Saturdays)</em></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>graph LR
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    SM[Score Matching] --&gt; DAE[Denoising Autoencoders]
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    DAE --&gt; SG[Score-Based Gen Models]
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    SM --&gt; SSM[Sliced Score Matching]
 </code></pre></div>
-<h2 id="_1">概念索引</h2>
-<table>
-<thead>
-<tr>
-<th>概念</th>
-<th>相关课程</th>
-<th>首次出现</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Score Matching</td>
-<td>Diffusion</td>
-<td>Hyvärinen (2005)</td>
-</tr>
-<tr>
-<td>Denoising Autoencoders</td>
-<td>Diffusion</td>
-<td>Vincent (2011)</td>
-</tr>
-</tbody>
-</table>
 
 
 
@@ -1234,6 +1279,8 @@
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

@@ -266,13 +266,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../ood/" class="md-tabs__link">
+        <a href="../../multimodal/" class="md-tabs__link">
           
   
   
     
   
-  OOD Course
+  Multimodal Course
 
         </a>
       </li>
@@ -579,14 +579,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ood/" class="md-nav__link ">
+            <a href="../../multimodal/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    OOD Course
+    Multimodal Course
   
 
     
@@ -603,7 +603,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    OOD Course
+    Multimodal Course
   
 
           </label>
@@ -1254,13 +1254,13 @@
 <p><strong>What is the core idea?</strong></p>
 <p>Instead of matching probabilities (p_model(x) ≈ p_data(x)), match the gradient of the log-density — what Hyvärinen called the <strong>"score function"</strong>: ψ(x) = ∇_x log p(x). The score of the true data distribution is ∇_x log p_data(x); the score of the model is ∇_x log p̃_model(x) (note: no Z appears because ∂/∂x log(p̃/Z) = ∂/∂x log p̃ − ∂/∂x log Z, and ∂/∂x log Z = 0 since Z does not depend on x). The normalizing constant Z entirely vanishes in the score formulation.</p>
 <p>The <strong>Score Matching</strong> objective minimizes the expected squared distance between the model's score and the data score:</p>
-<p>$$
+<div class="arithmatex">\[
 J(θ) = ½ ∫ p_data(x) · ‖ ∇_x log p_model(x; θ) − ∇_x log p_data(x) ‖² dx
-$$</p>
+\]</div>
 <p>Through integration by parts, Hyvärinen showed this can be rewritten into a form that depends only on the model (and its first and second derivatives), with the data appearing only through expectations over p_data:</p>
-<p>$$
+<div class="arithmatex">\[
 J(θ) = E_{p_data}[ ½ · ‖ ∇_x log p_model(x; θ) ‖² + ∇_x² log p_model(x; θ) ] + constant
-$$</p>
+\]</div>
 <p>The "constant" term depends only on p_data and can be ignored during optimization.</p>
 <p><strong>Why does it work?</strong></p>
 <p>The score function captures all information about the density up to a multiplicative constant — it tells you which direction to move in x-space to increase probability. Two densities with the same score can differ only by a constant factor (i.e., the normalizing constant). By matching the score, you effectively recover the full shape of the density without ever computing Z. The integration-by-parts trick eliminates the dependence on the unknown data score — all you need are samples.</p>
@@ -1401,6 +1401,8 @@ $$</p>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
