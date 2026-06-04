@@ -11,13 +11,24 @@
 - **Denoising Score Matching** ([Vincent 2011](diffusion/002-vincent-2011.md)) — Equivalence between DAE reconstruction and score estimation
 - **Tweedie's Formula** ([Vincent 2011](diffusion/002-vincent-2011.md)) — Statistical identity connecting posterior expectation and score
 
+### llm-systems
+- **Model Parallelism** ([Shoeybi 2019](systems/001-megatron-lm-shoeybi-2019.md)) — Splitting model parameters across GPUs within a single layer
+- **Intra-layer Tensor Parallelism** ([Shoeybi 2019](systems/001-megatron-lm-shoeybi-2019.md)) — Column/row-wise partition of weight matrices
+- **All-Reduce Communication** ([Shoeybi 2019](systems/001-megatron-lm-shoeybi-2019.md)) — Communication pattern at layer boundaries
+- **Scaling Efficiency** ([Shoeybi 2019](systems/001-megatron-lm-shoeybi-2019.md)) — 76% efficiency on 512 GPUs for 8.3B parameter models
+
 ## Cross-Course Connections
 
-*(Will be populated on Saturdays)*
+- **Model Parallelism → Large-scale Training** — The scaling techniques pioneered in Megatron-LM (tensor parallelism) are prerequisites for training the massive diffusion models covered in the diffusion course, enabling multi-billion parameter vision models
+- **All-Reduce → Distributed Systems** — The communication-efficient patterns established here underpin modern LLM serving systems (vLLM, SGLang) and their distributed inference architectures
 
 ```mermaid
 graph LR
     SM[Score Matching] --> DAE[Denoising Autoencoders]
     DAE --> SG[Score-Based Gen Models]
     SM --> SSM[Sliced Score Matching]
+    TP[Tensor Parallelism] --> PS[Parallel Systems]
+    PS --> LI[LLM Inference]
+    TP --> 3D[3D Parallelism]
+    3D --> Z[ZeRO/FSDP]
 ```
