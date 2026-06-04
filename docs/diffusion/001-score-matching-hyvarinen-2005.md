@@ -27,21 +27,21 @@ Researchers needed a way to train unnormalized density models — models where p
 
 **What is the core idea?**
 
-Instead of matching probabilities (p_model(x) ≈ p_data(x)), match the gradient of the log-density — what Hyvärinen called the **"score function"**: ψ(x) = ∇_x log p(x). The score of the true data distribution is ∇_x log p_data(x); the score of the model is ∇_x log p̃_model(x) (note: no Z appears because ∂/∂x log(p̃/Z) = ∂/∂x log p̃ − ∂/∂x log Z, and ∂/∂x log Z = 0 since Z does not depend on x). The normalizing constant Z entirely vanishes in the score formulation.
+Instead of matching probabilities (p_{\text{model}}(x) ≈ p_{\text{data}}(x)), match the gradient of the log-density — what Hyvärinen called the **"score function"**: ψ(x) = ∇_x log p(x). The score of the true data distribution is ∇_x log p_{\text{data}}(x); the score of the model is ∇_x log \tilde{p}_{\text{model}}(x) (note: no Z appears because ∂/∂x log(p̃/Z) = ∂/∂x log p̃ − ∂/∂x log Z, and ∂/∂x log Z = 0 since Z does not depend on x). The normalizing constant Z entirely vanishes in the score formulation.
 
 The **Score Matching** objective minimizes the expected squared distance between the model's score and the data score:
 
 $$
-J(θ) = ½ ∫ p_data(x) · ‖ ∇_x log p_model(x; θ) − ∇_x log p_data(x) ‖² dx
+J(\theta) = \frac{1}{2} \int p_{\text{data}}(x) \cdot \| \nabla_x \log p_{\text{model}}(x; \theta) - \nabla_x \log p_{\text{data}}(x) \|^2 dx
 $$
 
-Through integration by parts, Hyvärinen showed this can be rewritten into a form that depends only on the model (and its first and second derivatives), with the data appearing only through expectations over p_data:
+Through integration by parts, Hyvärinen showed this can be rewritten into a form that depends only on the model (and its first and second derivatives), with the data appearing only through expectations over $p_{\text{data}}$:
 
 $$
-J(θ) = E_{p_data}[ ½ · ‖ ∇_x log p_model(x; θ) ‖² + ∇_x² log p_model(x; θ) ] + constant
+J(\theta) = \mathbb{E}_{p_{\text{data}}}\left[ \frac{1}{2} \cdot \| \nabla_x \log p_{\text{model}}(x; \theta) \|^2 + \nabla_x^2 \log p_{\text{model}}(x; \theta) \right] + \text{constant}
 $$
 
-The "constant" term depends only on p_data and can be ignored during optimization.
+The "constant" term depends only on p_{\text{data}} and can be ignored during optimization.
 
 **Why does it work?**
 
@@ -93,9 +93,13 @@ Score Matching (2005) → Denoising AE connection (2011) → Sliced SM (2019) �
 
 **The trace of the Hessian and computational bottlenecks.**
 
-The objective simplifies to: J(θ) = E_{p_data}[ ½ ‖∇_x log p̃_model(x; θ)‖² + ∇_x² log p̃_model(x; θ) ].
+The objective simplifies to:
 
-The second term, ∇_x² log p̃_model (the trace of the Hessian, or Laplacian), is the computational bottleneck. For a model with d-dimensional input, the Hessian is a d×d matrix — computing its trace naively costs O(d²) or requires a separate backprop for each dimension (O(d) passes). For images (d ≈ 3×256×256 = 196,608), this is prohibitive.
+$$
+J(\theta) = \mathbb{E}_{p_{\text{data}}}\left[ \frac{1}{2} \| \nabla_x \log \tilde{p}_{\text{model}}(x; \theta) \|^2 + \nabla_x^2 \log \tilde{p}_{\text{model}}(x; \theta) \right].
+$$
+
+The second term, $\nabla_x^2 \log \tilde{p}_{\text{model}}$ (the trace of the Hessian, or Laplacian), is the computational bottleneck. For a model with d-dimensional input, the Hessian is a d×d matrix — computing its trace naively costs O(d²) or requires a separate backprop for each dimension (O(d) passes). For images (d ≈ 3×256×256 = 196,608), this is prohibitive.
 
 The field's response to this bottleneck created multiple research branches:
 - **Denoising Score Matching (Vincent, 2011):** Replaces the Hessian trace with a denoising objective that is O(1) per sample.
