@@ -1,0 +1,84 @@
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #7c3aed;
+  --md-primary-fg-color--light: #a78bfa;
+  --md-primary-fg-color--dark: #5b21b6;
+  --md-accent-fg-color: #2dd4bf;
+  --md-accent-fg-color--light: #5eead4;
+  --md-accent-fg-color--dark: #14b8a6;
+  --md-default-bg-color: #0f172a;
+  --md-default-fg-color: #e2e8f0;
+  --md-default-fg-color--light: #94a3b8;
+  --md-default-fg-color--lighter: #64748b;
+  --md-default-fg-color--lightest: #475569;
+  --md-code-bg-color: #1e293b;
+  --md-code-fg-color: #e2e8f0;
+  --md-typeset-a-color: #a78bfa;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #7c3aed;
+  --md-primary-fg-color--light: #a78bfa;
+  --md-primary-fg-color--dark: #5b21b6;
+  --md-accent-fg-color: #0891b2;
+  --md-accent-fg-color--light: #06b6d4;
+  --md-accent-fg-color--dark: #0e7490;
+}
+
+/* Better typography */
+.md-typeset {
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding-bottom: 0.3rem;
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+}
+
+/* Code block improvements */
+.md-typeset pre > code {
+  border-radius: 8px;
+}
+
+/* Smooth card style for admonitions */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Navigation improvements */
+.md-nav--primary .md-nav__title {
+  font-weight: 600;
+}
+
+/* Table improvements */
+.md-typeset table:not([class]) {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* MathJax block display */
+.md-typeset .MathJax {
+  font-size: 1.1em;
+}
+
+/* Progress indicators */
+.progress-bar {
+  display: inline-block;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--md-accent-fg-color), var(--md-primary-fg-color));
+}

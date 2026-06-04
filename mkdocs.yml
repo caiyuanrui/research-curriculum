@@ -6,40 +6,83 @@ edit_uri: blob/main/docs/
 
 theme:
   name: material
+  icon:
+    logo: material/book-open-page-variant
+    repo: fontawesome/brands/github
+    admonition:
+      note: material/note-edit-outline
+      abstract: material/text-search
+      info: material/information-outline
+      tip: material/lightbulb-on-outline
+      success: material/check-circle-outline
+      question: material/help-circle-outline
+      warning: material/alert-outline
+      failure: material/close-circle-outline
+      danger: material/lightning-bolt-outline
+      bug: material/bug-outline
+      example: material/test-tube
+      quote: material/format-quote-open
+  font:
+    text: Inter
+    code: JetBrains Mono
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.indexes
     - navigation.top
+    - navigation.footer
     - toc.follow
     - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - header.autohide
+    - announce.dismiss
   palette:
     - scheme: slate
-      primary: indigo
-      accent: teal
-      toggle:
-        icon: material/weather-night
-        name: 切换到亮色模式
-    - scheme: default
-      primary: indigo
-      accent: teal
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
-        name: 切换到暗色模式
+        name: 亮色模式
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: 暗色模式
+
+extra_css:
+  - https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap
+  - stylesheets/extra.css
 
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
   - pymdownx.superfences
   - pymdownx.details
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.smartsymbols
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - admonition
   - footnotes
   - attr_list
   - md_in_html
+  - def_list
+  - tables
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -67,5 +110,10 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/caiyuanrui/research-curriculum
+    - icon: fontawesome/solid/book-open
+      link: https://caiyuanrui.github.io/research-curriculum
+  generator: false
+  analytics:
+    provider: null
 
-copyright: Copyright &copy; 2026 Research Curriculum
+copyright: CC BY-NC 4.0 · Built with MkDocs Material
