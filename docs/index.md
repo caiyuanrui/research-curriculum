@@ -7,7 +7,7 @@
 | 课程 | 时间 | 描述 |
 |------|------|------|
 | [Agent Course](agent/index.md) | 周一 | AI Agent 的发展历程和技术路线 |
-| [OOD Course](ood/index.md) | 周二 | Out-of-Distribution 检测与泛化 |
+| [Multimodal Course](multimodal/index.md) | 周二 | 多模态学习：视觉-语言预训练到多模态大模型 |
 | [Diffusion Course](diffusion/index.md) | 周三 | 扩散模型理论与实践 |
 | [LLM Systems](systems/index.md) | 周四 | LLM 系统架构与工程 |
 | [Lab Reports](labs/index.md) | 周五 | 前沿实验室技术报告 |

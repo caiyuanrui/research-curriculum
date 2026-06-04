@@ -43,8 +43,8 @@ nav:
   - Home: index.md
   - Agent Course:
     - agent/index.md
-  - OOD Course:
-    - ood/index.md
+  - Multimodal Course:
+    - multimodal/index.md
   - Diffusion Course:
     - diffusion/index.md
     - "001: Score Matching (Hyvarinen 2005)": diffusion/001-score-matching-hyvarinen-2005.md
