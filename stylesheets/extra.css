@@ -31,17 +31,38 @@
   --md-typeset-a-color: #475569;
 }
 
-/* ── Header: glass, no color block ── */
-.md-header {
-  background-color: rgba(15, 23, 42, 0.75);
+/* ── Header + Tabs: glass, no color block ── */
+.md-header,
+.md-tabs {
+  background-color: rgba(15, 23, 42, 0.75) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+}
+
+.md-header {
   border-bottom: 1px solid #1e293b;
 }
 
+.md-tabs {
+  border-bottom: none;
+}
+
+[data-md-color-scheme="default"] .md-header,
+[data-md-color-scheme="default"] .md-tabs {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
 [data-md-color-scheme="default"] .md-header {
-  background-color: rgba(255, 255, 255, 0.8);
   border-bottom: 1px solid #e2e8f0;
+}
+
+[data-md-color-scheme="default"] .md-tabs__link {
+  color: #475569;
+}
+
+[data-md-color-scheme="default"] .md-tabs__link--active {
+  color: #0f172a;
+  font-weight: 600;
 }
 
 /* ── Active nav: subtle bg + accent text ── */
