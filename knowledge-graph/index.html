@@ -836,6 +836,8 @@
           
         
       
+        
+      
     
     
     
@@ -870,6 +872,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
@@ -883,6 +890,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systems/001-megatron-lm-shoeybi-2019/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    001: Megatron-LM (Shoeybi 2019)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -1146,6 +1181,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#llm-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        llm-systems
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1219,6 +1265,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#llm-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        llm-systems
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1266,12 +1323,26 @@
 <li><strong>Denoising Score Matching</strong> (<a href="../diffusion/002-vincent-2011/">Vincent 2011</a>) — Equivalence between DAE reconstruction and score estimation</li>
 <li><strong>Tweedie's Formula</strong> (<a href="../diffusion/002-vincent-2011/">Vincent 2011</a>) — Statistical identity connecting posterior expectation and score</li>
 </ul>
+<h3 id="llm-systems">llm-systems</h3>
+<ul>
+<li><strong>Model Parallelism</strong> (<a href="../systems/001-megatron-lm-shoeybi-2019/">Shoeybi 2019</a>) — Splitting model parameters across GPUs within a single layer</li>
+<li><strong>Intra-layer Tensor Parallelism</strong> (<a href="../systems/001-megatron-lm-shoeybi-2019/">Shoeybi 2019</a>) — Column/row-wise partition of weight matrices</li>
+<li><strong>All-Reduce Communication</strong> (<a href="../systems/001-megatron-lm-shoeybi-2019/">Shoeybi 2019</a>) — Communication pattern at layer boundaries</li>
+<li><strong>Scaling Efficiency</strong> (<a href="../systems/001-megatron-lm-shoeybi-2019/">Shoeybi 2019</a>) — 76% efficiency on 512 GPUs for 8.3B parameter models</li>
+</ul>
 <h2 id="cross-course-connections">Cross-Course Connections</h2>
-<p><em>(Will be populated on Saturdays)</em></p>
+<ul>
+<li><strong>Model Parallelism → Large-scale Training</strong> — The scaling techniques pioneered in Megatron-LM (tensor parallelism) are prerequisites for training the massive diffusion models covered in the diffusion course, enabling multi-billion parameter vision models</li>
+<li><strong>All-Reduce → Distributed Systems</strong> — The communication-efficient patterns established here underpin modern LLM serving systems (vLLM, SGLang) and their distributed inference architectures</li>
+</ul>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>graph LR
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    SM[Score Matching] --&gt; DAE[Denoising Autoencoders]
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    DAE --&gt; SG[Score-Based Gen Models]
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    SM --&gt; SSM[Sliced Score Matching]
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    TP[Tensor Parallelism] --&gt; PS[Parallel Systems]
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    PS --&gt; LI[LLM Inference]
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    TP --&gt; 3D[3D Parallelism]
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    3D --&gt; Z[ZeRO/FSDP]
 </span></code></pre></div>
 
 
