@@ -17,10 +17,18 @@
 - **All-Reduce Communication** ([Shoeybi 2019](systems/001-megatron-lm-shoeybi-2019.md)) — Communication pattern at layer boundaries
 - **Scaling Efficiency** ([Shoeybi 2019](systems/001-megatron-lm-shoeybi-2019.md)) — 76% efficiency on 512 GPUs for 8.3B parameter models
 
+### labs
+- **Agentic Coding** ([GPT-5.5 Tech Report](labs/001-gpt-5-5-technical-report.md)) — Frontier model achieving 82.7% on Terminal-Bench 2.0 for autonomous software engineering
+- **Token Efficiency** ([GPT-5.5 Tech Report](labs/001-gpt-5-5-technical-report.md)) — Correlates reduced token usage with deeper task understanding
+- **Destructive Action Avoidance** ([GPT-5.5 Tech Report](labs/001-gpt-5-5-technical-report.md)) — Safety metric for agentic rollouts: 52% perfect reversion rate
+- **FrontierMath** ([GPT-5.5 Tech Report](labs/001-gpt-5-5-technical-report.md)) — 35.4% on Tier 4 math problems; discovered new Ramsey number proof
+- **Multiturn Jailbreak Evaluation** ([GPT-5.5 Tech Report](labs/001-gpt-5-5-technical-report.md)) — Novel adversary simulation protocol replacing StrongReject
+
 ## Cross-Course Connections
 
 - **Model Parallelism → Large-scale Training** — The scaling techniques pioneered in Megatron-LM (tensor parallelism) are prerequisites for training the massive diffusion models covered in the diffusion course, enabling multi-billion parameter vision models
 - **All-Reduce → Distributed Systems** — The communication-efficient patterns established here underpin modern LLM serving systems (vLLM, SGLang) and their distributed inference architectures
+- **Agentic Coding → LLM Systems** — GPT-5.5's 82.7% on Terminal-Bench 2.0 requires underlying infrastructure (vLLM, FlashAttention, PagedAttention) studied in the LLM Systems course
 
 ```mermaid
 graph LR
@@ -31,4 +39,6 @@ graph LR
     PS --> LI[LLM Inference]
     TP --> 3D[3D Parallelism]
     3D --> Z[ZeRO/FSDP]
+    AC[Agentic Coding] --> LI
+    AC --> SS[Safety Systems]
 ```

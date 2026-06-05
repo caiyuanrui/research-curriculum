@@ -6,4 +6,4 @@
 
 | # | Date | Report | Status |
 |---|------|--------|--------|
-| — | — | *等待课程启动* | ⏳ |
+| 1 | 2026-04-23 | [GPT-5.5 Technical Report](001-gpt-5-5-technical-report.md) | ✅ Read |
