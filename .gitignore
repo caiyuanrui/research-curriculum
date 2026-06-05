@@ -1,2 +1,3 @@
 # State files — not published to Pages
 state/
+.git-credentials
