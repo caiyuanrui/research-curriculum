@@ -940,6 +940,8 @@
           
         
       
+        
+      
     
     
     
@@ -974,6 +976,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
@@ -987,6 +994,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../labs/001-gpt-5-5-technical-report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    001: GPT-5.5 Technical Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -1192,6 +1227,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#labs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        labs
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1276,6 +1322,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#labs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        labs
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1330,10 +1387,19 @@
 <li><strong>All-Reduce Communication</strong> (<a href="../systems/001-megatron-lm-shoeybi-2019/">Shoeybi 2019</a>) — Communication pattern at layer boundaries</li>
 <li><strong>Scaling Efficiency</strong> (<a href="../systems/001-megatron-lm-shoeybi-2019/">Shoeybi 2019</a>) — 76% efficiency on 512 GPUs for 8.3B parameter models</li>
 </ul>
+<h3 id="labs">labs</h3>
+<ul>
+<li><strong>Agentic Coding</strong> (<a href="../labs/001-gpt-5-5-technical-report/">GPT-5.5 Tech Report</a>) — Frontier model achieving 82.7% on Terminal-Bench 2.0 for autonomous software engineering</li>
+<li><strong>Token Efficiency</strong> (<a href="../labs/001-gpt-5-5-technical-report/">GPT-5.5 Tech Report</a>) — Correlates reduced token usage with deeper task understanding</li>
+<li><strong>Destructive Action Avoidance</strong> (<a href="../labs/001-gpt-5-5-technical-report/">GPT-5.5 Tech Report</a>) — Safety metric for agentic rollouts: 52% perfect reversion rate</li>
+<li><strong>FrontierMath</strong> (<a href="../labs/001-gpt-5-5-technical-report/">GPT-5.5 Tech Report</a>) — 35.4% on Tier 4 math problems; discovered new Ramsey number proof</li>
+<li><strong>Multiturn Jailbreak Evaluation</strong> (<a href="../labs/001-gpt-5-5-technical-report/">GPT-5.5 Tech Report</a>) — Novel adversary simulation protocol replacing StrongReject</li>
+</ul>
 <h2 id="cross-course-connections">Cross-Course Connections</h2>
 <ul>
 <li><strong>Model Parallelism → Large-scale Training</strong> — The scaling techniques pioneered in Megatron-LM (tensor parallelism) are prerequisites for training the massive diffusion models covered in the diffusion course, enabling multi-billion parameter vision models</li>
 <li><strong>All-Reduce → Distributed Systems</strong> — The communication-efficient patterns established here underpin modern LLM serving systems (vLLM, SGLang) and their distributed inference architectures</li>
+<li><strong>Agentic Coding → LLM Systems</strong> — GPT-5.5's 82.7% on Terminal-Bench 2.0 requires underlying infrastructure (vLLM, FlashAttention, PagedAttention) studied in the LLM Systems course</li>
 </ul>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>graph LR
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    SM[Score Matching] --&gt; DAE[Denoising Autoencoders]
@@ -1343,6 +1409,8 @@
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    PS --&gt; LI[LLM Inference]
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    TP --&gt; 3D[3D Parallelism]
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    3D --&gt; Z[ZeRO/FSDP]
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    AC[Agentic Coding] --&gt; LI
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    AC --&gt; SS[Safety Systems]
 </span></code></pre></div>
 
 
