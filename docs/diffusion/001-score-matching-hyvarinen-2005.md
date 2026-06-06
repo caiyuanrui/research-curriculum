@@ -27,7 +27,7 @@ Researchers needed a way to train unnormalized density models — models where p
 
 **What is the core idea?**
 
-Instead of matching probabilities (p_{\text{model}}(x) ≈ p_{\text{data}}(x)), match the gradient of the log-density — what Hyvärinen called the **"score function"**: ψ(x) = ∇_x log p(x). The score of the true data distribution is ∇_x log p_{\text{data}}(x); the score of the model is ∇_x log \tilde{p}_{\text{model}}(x) (note: no Z appears because ∂/∂x log(p̃/Z) = ∂/∂x log p̃ − ∂/∂x log Z, and ∂/∂x log Z = 0 since Z does not depend on x). The normalizing constant Z entirely vanishes in the score formulation.
+Instead of matching probabilities ($p_{\text{model}}(x) \approx p_{\text{data}}(x)$), match the gradient of the log-density — what Hyvärinen called the **"score function"**: $\psi(x) = \nabla_x \log p(x)$. The score of the true data distribution is $\nabla_x \log p_{\text{data}}(x)$; the score of the model is $\nabla_x \log \tilde{p}_{\text{model}}(x)$ (note: no $Z$ appears because $\partial/\partial x \log(\tilde{p}/Z) = \partial/\partial x \log \tilde{p} - \partial/\partial x \log Z$, and $\partial/\partial x \log Z = 0$ since $Z$ does not depend on $x$). The normalizing constant $Z$ entirely vanishes in the score formulation.
 
 The **Score Matching** objective minimizes the expected squared distance between the model's score and the data score:
 
@@ -41,7 +41,7 @@ $$
 J(\theta) = \mathbb{E}_{p_{\text{data}}}\left[ \frac{1}{2} \cdot \| \nabla_x \log p_{\text{model}}(x; \theta) \|^2 + \nabla_x^2 \log p_{\text{model}}(x; \theta) \right] + \text{constant}
 $$
 
-The "constant" term depends only on p_{\text{data}} and can be ignored during optimization.
+The "constant" term depends only on $p_{\text{data}}$ and can be ignored during optimization.
 
 **Why does it work?**
 
