@@ -29,6 +29,9 @@
 - **Model Parallelism → Large-scale Training** — The scaling techniques pioneered in Megatron-LM (tensor parallelism) are prerequisites for training the massive diffusion models covered in the diffusion course, enabling multi-billion parameter vision models
 - **All-Reduce → Distributed Systems** — The communication-efficient patterns established here underpin modern LLM serving systems (vLLM, SGLang) and their distributed inference architectures
 - **Agentic Coding → LLM Systems** — GPT-5.5's 82.7% on Terminal-Bench 2.0 requires underlying infrastructure (vLLM, FlashAttention, PagedAttention) studied in the LLM Systems course
+- **Bottleneck Elimination Pattern** ([cross-domain week-23](weekly-review/cross-domain-week-23.md)) — Score matching, denoising score matching, and Megatron-LM all identify a core computational bottleneck and solve it through mathematical/engineering reframing rather than brute force
+- **Denoising as Universal Learning Principle** ([cross-domain week-23](weekly-review/cross-domain-week-23.md)) — Vincent's DAE-score connection, GPT-5.5's RL from internal CoT, and modern diffusion training all share the "add noise → learn to denoise → learn distribution/reasoning" pattern
+- **Multi-scale Gradient Information** ([cross-domain week-23](weekly-review/cross-domain-week-23.md)) — Score matching operates on data-space gradients (∇ₓ log p), Megatron on parameter-space gradients (∇_θ ℒ), GPT-5.5 on reasoning-space "gradients" (RL reward signals)
 
 ```mermaid
 graph LR

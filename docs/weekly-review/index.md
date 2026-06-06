@@ -4,4 +4,4 @@
 
 | Week | Date | Summary |
 |------|------|---------|
-| — | — | *First review coming soon* |
+| 23 | 2026-06-06 | [Cross-Domain: Score Matching ↔ Systems ↔ Agentic AI](cross-domain-week-23.md) |
