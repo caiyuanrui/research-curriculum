@@ -1397,7 +1397,7 @@
 <h2 id="core-idea">💡 Core Idea</h2>
 <p><strong>What is the core idea?</strong></p>
 <p>Vincent proved that a <strong>denoising autoencoder trained with squared error and Gaussian corruption is implicitly performing score matching</strong>. Specifically:</p>
-<p>Let p̃<em _text_data="\text{data">σ(x̃|x) = N(x̃; x, σ²I) be the corruption process, and let q_σ(x̃) = ∫ p</em>(x) · p̃_σ(x̃|x) dx be the corrupted data distribution (a Parzen density estimate). The DAE learns a reconstruction function r_θ(x̃) that minimizes E[ ‖r_θ(x̃) − x‖² ].}</p>
+<p>Let <span class="arithmatex">\(\tilde{p}_\sigma(\tilde{x} \mid x) = \mathcal{N}(\tilde{x}; x, \sigma^2 I)\)</span> be the corruption process, and let <span class="arithmatex">\(q_\sigma(\tilde{x}) = \int p_{\text{data}}(x) \cdot \tilde{p}_\sigma(\tilde{x} \mid x) \, dx\)</span> be the corrupted data distribution (a Parzen density estimate). The DAE learns a reconstruction function <span class="arithmatex">\(r_\theta(\tilde{x})\)</span> that minimizes <span class="arithmatex">\(\mathbb{E}\left[ \|r_\theta(\tilde{x}) - x\|^2 \right]\)</span>.</p>
 <p>Vincent showed that the optimal reconstruction function r*(x̃) satisfies:</p>
 <div class="arithmatex">\[
 r^*(\tilde{x}) - \tilde{x} = \sigma^2 \cdot \nabla_{\tilde{x}} \log q_{\sigma}(\tilde{x})
