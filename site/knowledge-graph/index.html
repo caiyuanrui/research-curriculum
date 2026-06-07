@@ -1044,6 +1044,8 @@
           
         
       
+        
+      
     
     
     
@@ -1078,6 +1080,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
@@ -1091,6 +1098,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../weekly-review/cross-domain-week-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cross-Domain Week 23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -1400,6 +1435,9 @@
 <li><strong>Model Parallelism → Large-scale Training</strong> — The scaling techniques pioneered in Megatron-LM (tensor parallelism) are prerequisites for training the massive diffusion models covered in the diffusion course, enabling multi-billion parameter vision models</li>
 <li><strong>All-Reduce → Distributed Systems</strong> — The communication-efficient patterns established here underpin modern LLM serving systems (vLLM, SGLang) and their distributed inference architectures</li>
 <li><strong>Agentic Coding → LLM Systems</strong> — GPT-5.5's 82.7% on Terminal-Bench 2.0 requires underlying infrastructure (vLLM, FlashAttention, PagedAttention) studied in the LLM Systems course</li>
+<li><strong>Bottleneck Elimination Pattern</strong> (<a href="../weekly-review/cross-domain-week-23/">cross-domain week-23</a>) — Score matching, denoising score matching, and Megatron-LM all identify a core computational bottleneck and solve it through mathematical/engineering reframing rather than brute force</li>
+<li><strong>Denoising as Universal Learning Principle</strong> (<a href="../weekly-review/cross-domain-week-23/">cross-domain week-23</a>) — Vincent's DAE-score connection, GPT-5.5's RL from internal CoT, and modern diffusion training all share the "add noise → learn to denoise → learn distribution/reasoning" pattern</li>
+<li><strong>Multi-scale Gradient Information</strong> (<a href="../weekly-review/cross-domain-week-23/">cross-domain week-23</a>) — Score matching operates on data-space gradients (∇ₓ log p), Megatron on parameter-space gradients (∇_θ ℒ), GPT-5.5 on reasoning-space "gradients" (RL reward signals)</li>
 </ul>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>graph LR
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    SM[Score Matching] --&gt; DAE[Denoising Autoencoders]
