@@ -1,0 +1,94 @@
+---
+title: "ReAct: Synergizing Reasoning and Acting in Language Models"
+authors: "Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan, Yuan Cao"
+year: 2023
+venue: "ICLR 2023"
+date: 2022-10-06
+course: "agent-course"
+tags: [agents, reasoning, acting, prompting, tool-use, chain-of-thought]
+phase: "ReAct"
+order: 1
+---
+
+# ReAct: Synergizing Reasoning and Acting in Language Models
+
+**Authors:** Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan, Yuan Cao
+**Year:** 2023 | **Venue:** ICLR 2023
+**Link:** [arXiv:2210.03629](https://arxiv.org/abs/2210.03629)
+
+---
+
+## Historical Context
+
+By late 2022, large language models (LLMs) had demonstrated two powerful but separately studied capabilities. **Chain-of-Thought (CoT) prompting** (Wei et al., 2022) showed that asking an LLM to "think step by step" dramatically improved reasoning on math, logic, and multi-step QA tasks. Separately, **act-only approaches** used LLMs to generate action plans for interactive environments like web navigation and text-based games. However, each approach had critical weaknesses: reasoning-only (CoT) had no access to external knowledge and suffered from hallucination and error propagation; act-only lacked abstract reasoning and working memory, making it brittle on long-horizon tasks. The research community lacked a unified paradigm that could simultaneously leverage the strengths of both reasoning and acting.
+
+## Core Idea
+
+ReAct (Reason + Act) proposes an elegantly simple prompting paradigm: **interleave verbal reasoning traces with task-specific actions** in a single trajectory. The LLM generates a sequence where each step is either a *thought* (internal reasoning that updates the model's context but does not affect the environment) or an *action* (external interaction that produces observations from tools/environments).
+
+The synergy is bidirectional:
+
+- **Reason to Act:** Reasoning traces help the model induce, track, and update high-level plans, decompose complex goals, inject commonsense knowledge, and handle exceptions during action execution.
+- **Act to Reason:** Actions allow the model to interface with external sources (e.g., a Wikipedia API, a game simulator, a web interface) to gather additional information that feeds back into reasoning, anchoring thought to grounded observation rather than parametric hallucination.
+
+Crucially, ReAct requires **no additional training or fine-tuning** — it is a pure prompting strategy using 1-2 few-shot in-context examples. The architecture can be a frozen large LM (the paper uses PaLM-540B) or a smaller fine-tuned model trained on successful ReAct trajectories.
+
+### Prompt Structure
+
+A ReAct prompt consists of interleaved turns labeled with clear prefixes:
+
+```
+Thought: I need to find out when the Transformer architecture was introduced.
+Action: Search[Transformer architecture introduction date]
+Observation: "Attention Is All You Need" was published in 2017.
+Thought: The Transformer was introduced in 2017. Now I should verify this.
+Action: Finish[The Transformer architecture was introduced in the 2017 paper "Attention Is All You Need"]
+```
+
+This structure makes the agent's decision process fully transparent and editable — a human can intervene to correct a hallucinating reasoning trace mid-trajectory.
+
+## Influence
+
+ReAct has been enormously influential — with over 11,000 citations as of 2026 — and fundamentally shaped the modern LLM agent paradigm:
+
+1. **Industry Standard:** The ReAct pattern (Thought → Action → Observation → Thought) is the default prompt format for virtually every LLM agent framework — LangChain, AutoGen, CrewAI, and countless others adopt ReAct-style interleaved reasoning.
+
+2. **Foundation for Extensions:** Nearly all subsequent agentic reasoning systems build directly on ReAct's interleaved paradigm:
+   - **Reflexion** adds self-evaluation after ReAct trajectories
+   - **ReWOO** decouples reasoning from observation for efficiency
+   - **AutoGen** extends the pattern to multi-agent conversations
+   - **Voyager** applies ReAct-style interleaving to long-horizon Minecraft agents
+   - **SWE-agent** uses ReAct-style formats for software engineering tasks
+
+3. **Benchmark Impact:** ReAct set new SOTA on four diverse benchmarks (HotpotQA, Fever, ALFWorld, WebShop) using only few-shot prompting, showing the paradigm's generality across language understanding and interactive decision making.
+
+4. **Interpretability:** By making reasoning traces visible and editable, ReAct opened new directions for human-in-the-loop AI systems and transparent decision-making.
+
+## Modern Perspective
+
+ReAct's core insight — that reasoning and acting are synergistic, not alternatives — remains one of the most productive ideas in LLM agent research. Today (2026), every major production agent system uses some variant of the ReAct pattern.
+
+**What has aged well:**
+- The interleaved reasoning-action loop is now canonical
+- The modular separation of "thought" and "action" enabled the entire ecosystem of agent frameworks
+- The finding that a simple prompting strategy can outperform supervised methods trained on ~100K examples is even more relevant today as frontier models continue to improve
+- The interpretability and human-editability of ReAct trajectories remain underexploited advantages
+
+**What has evolved:**
+- Modern agents typically use fine-tuned models rather than pure prompting, achieving much higher reliability
+- The simple ReAct loop has been extended with memory, reflection, planning hierarchies, and multi-agent coordination
+- Tool-calling APIs (function calling in GPT-4+, Claude tools) have made the action format more structured and reliable than free-form text actions
+- Post-training with reinforcement learning (e.g., RL from tool-use feedback) now produces substantially more capable agents
+
+**What remains challenging:**
+- Error propagation: a single bad reasoning step can derail the entire trajectory
+- Token cost: full ReAct trajectories on long tasks consume substantial context
+- The "reasoning gap": smaller models prompted with ReAct show inconsistent reasoning quality
+
+## Research Takeaway
+
+ReAct's most important lesson is architectural: **separation of concerns** — reasoning traces manage internal state and planning, while actions manage external interaction — is the key design principle for building robust LLM agents. This simple decomposition, validated by the paper's results, has become the universal blueprint for agentic systems. As a researcher, the takeaway is to look for opportunities to create clean interfaces between cognitive modules (reasoning, memory, planning, tool-use) rather than monolithic approaches.
+
+## Optional Deep Dive
+
+The paper's most technically interesting result is the **ReAct + CoT hybrid**. The authors found that ReAct alone sometimes underperforms CoT on reasoning-heavy QA tasks (e.g., HotpotQA) because the LLM's own parametric knowledge embedded in the CoT reasoning trace can fill gaps that external search cannot efficiently cover. By combining both — first prompting with CoT to extract parametric knowledge, then switching to ReAct for external grounding — the hybrid approach achieves the best of both worlds (35.1 on HotpotQA vs. 29.4 for CoT-only and 27.4 for ReAct-only). This insight that **internal knowledge and external grounding are complementary, not competing**, has been repeatedly validated in subsequent systems.

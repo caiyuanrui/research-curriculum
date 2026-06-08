@@ -33,6 +33,13 @@
 - **Denoising as Universal Learning Principle** ([cross-domain week-23](weekly-review/cross-domain-week-23.md)) — Vincent's DAE-score connection, GPT-5.5's RL from internal CoT, and modern diffusion training all share the "add noise → learn to denoise → learn distribution/reasoning" pattern
 - **Multi-scale Gradient Information** ([cross-domain week-23](weekly-review/cross-domain-week-23.md)) — Score matching operates on data-space gradients (∇ₓ log p), Megatron on parameter-space gradients (∇_θ ℒ), GPT-5.5 on reasoning-space "gradients" (RL reward signals)
 
+### agent
+- **ReAct Prompting** ([Yao 2023](agent/001-react-yao-2022.md)) — Interleaved reasoning traces and task-specific actions for LLM agents
+- **Reasoning-Action Synergy** ([Yao 2023](agent/001-react-yao-2022.md)) — Bidirectional benefit: reasoning guides action planning, actions ground reasoning in external observation
+- **Thought-Action-Observation Loop** ([Yao 2023](agent/001-react-yao-2022.md)) — Canonical format (Thought → Action → Observation → Thought) underlying modern agent frameworks
+- **ReAct + CoT Hybrid** ([Yao 2023](agent/001-react-yao-2022.md)) — Combining parametric knowledge with external grounding outperforms either alone
+- **In-context Agent Design** ([Yao 2023](agent/001-react-yao-2022.md)) — Zero-additional-training agents via few-shot prompting with 1-2 examples
+
 ```mermaid
 graph LR
     SM[Score Matching] --> DAE[Denoising Autoencoders]

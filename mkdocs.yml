@@ -92,6 +92,7 @@ nav:
   - Home: index.md
   - Agent Course:
     - agent/index.md
+    - "001: ReAct (Yao 2023)": agent/001-react-yao-2022.md
   - Multimodal Course:
     - multimodal/index.md
   - Diffusion Course:
