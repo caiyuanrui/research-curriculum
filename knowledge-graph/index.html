@@ -564,6 +564,8 @@
           
         
       
+        
+      
     
     
     
@@ -598,6 +600,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
@@ -611,6 +618,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/001-react-yao-2022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    001: ReAct (Yao 2023)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -1317,6 +1352,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Cross-Course Connections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1412,6 +1464,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Cross-Course Connections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1468,6 +1537,14 @@
 <li><strong>Bottleneck Elimination Pattern</strong> (<a href="../weekly-review/cross-domain-week-23/">cross-domain week-23</a>) — Score matching, denoising score matching, and Megatron-LM all identify a core computational bottleneck and solve it through mathematical/engineering reframing rather than brute force</li>
 <li><strong>Denoising as Universal Learning Principle</strong> (<a href="../weekly-review/cross-domain-week-23/">cross-domain week-23</a>) — Vincent's DAE-score connection, GPT-5.5's RL from internal CoT, and modern diffusion training all share the "add noise → learn to denoise → learn distribution/reasoning" pattern</li>
 <li><strong>Multi-scale Gradient Information</strong> (<a href="../weekly-review/cross-domain-week-23/">cross-domain week-23</a>) — Score matching operates on data-space gradients (∇ₓ log p), Megatron on parameter-space gradients (∇_θ ℒ), GPT-5.5 on reasoning-space "gradients" (RL reward signals)</li>
+</ul>
+<h3 id="agent">agent</h3>
+<ul>
+<li><strong>ReAct Prompting</strong> (<a href="../agent/001-react-yao-2022/">Yao 2023</a>) — Interleaved reasoning traces and task-specific actions for LLM agents</li>
+<li><strong>Reasoning-Action Synergy</strong> (<a href="../agent/001-react-yao-2022/">Yao 2023</a>) — Bidirectional benefit: reasoning guides action planning, actions ground reasoning in external observation</li>
+<li><strong>Thought-Action-Observation Loop</strong> (<a href="../agent/001-react-yao-2022/">Yao 2023</a>) — Canonical format (Thought → Action → Observation → Thought) underlying modern agent frameworks</li>
+<li><strong>ReAct + CoT Hybrid</strong> (<a href="../agent/001-react-yao-2022/">Yao 2023</a>) — Combining parametric knowledge with external grounding outperforms either alone</li>
+<li><strong>In-context Agent Design</strong> (<a href="../agent/001-react-yao-2022/">Yao 2023</a>) — Zero-additional-training agents via few-shot prompting with 1-2 examples</li>
 </ul>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>graph LR
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    SM[Score Matching] --&gt; DAE[Denoising Autoencoders]
