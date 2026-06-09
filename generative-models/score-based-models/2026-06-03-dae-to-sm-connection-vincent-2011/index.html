@@ -10,31 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://caiyuanrui.github.io/research-curriculum/weekly-review/">
+        <link rel="canonical" href="https://caiyuanrui.github.io/research-curriculum/generative-models/score-based-models/2026-06-03-dae-to-sm-connection-vincent-2011/">
       
       
-        <link rel="prev" href="../labs/001-gpt-5-5-technical-report/">
+        <link rel="prev" href="../2026-06-03-score-matching-hyvarinen-2005/">
       
       
-        <link rel="next" href="cross-domain-week-23/">
+        <link rel="next" href="../../../llm-systems/">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Weekly Review - AI Tour</title>
+        <title>A Connection Between Score Matching and Denoising Autoencoders - AI Tour</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
   
@@ -120,9 +120,9 @@
     
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -149,7 +149,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#weekly-review" class="md-skip">
+        <a href="#a-connection-between-score-matching-and-denoising-autoencoders" class="md-skip">
           Skip to content
         </a>
       
@@ -165,7 +165,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="AI Tour" class="md-header__button md-logo" aria-label="AI Tour" data-md-component="logo">
+    <a href="../../.." title="AI Tour" class="md-header__button md-logo" aria-label="AI Tour" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
@@ -185,7 +185,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Weekly Review
+              A Connection Between Score Matching and Denoising Autoencoders
             
           </span>
         </div>
@@ -290,7 +290,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -311,7 +311,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../agent/" class="md-tabs__link">
+        <a href="../../../agents/" class="md-tabs__link">
           
   
   
@@ -333,7 +333,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../agentic-rl/" class="md-tabs__link">
+        <a href="../../../agentic-rl/" class="md-tabs__link">
           
   
   
@@ -355,7 +355,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../multimodal/" class="md-tabs__link">
+        <a href="../../../multimodal/" class="md-tabs__link">
           
   
   
@@ -373,17 +373,19 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../diffusion/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
   
     
   
-  Diffusion Course
+  Generative Models
 
         </a>
       </li>
@@ -399,7 +401,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../systems/" class="md-tabs__link">
+        <a href="../../../llm-systems/" class="md-tabs__link">
           
   
   
@@ -421,7 +423,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../labs/" class="md-tabs__link">
+        <a href="../../../lab-reports/" class="md-tabs__link">
           
   
   
@@ -439,13 +441,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../cross-domain-summary/" class="md-tabs__link">
           
   
   
@@ -465,7 +465,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../timeline/" class="md-tabs__link">
+      <a href="../../../timeline/" class="md-tabs__link">
         
   
   
@@ -484,7 +484,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../knowledge-graph/" class="md-tabs__link">
+      <a href="../../../knowledge-graph/" class="md-tabs__link">
         
   
   
@@ -525,7 +525,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="AI Tour" class="md-nav__button md-logo" aria-label="AI Tour" data-md-component="logo">
+    <a href="../../.." title="AI Tour" class="md-nav__button md-logo" aria-label="AI Tour" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
@@ -555,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -607,7 +607,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../agent/" class="md-nav__link ">
+            <a href="../../../agents/" class="md-nav__link ">
               
   
   
@@ -650,15 +650,84 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../agents/agent-architectures/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Architectures
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent Architectures
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../agent/001-react-yao-2022/" class="md-nav__link">
+      <a href="../../../agents/agent-architectures/2022-10-06-react-yao-2022/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    001: ReAct (Yao 2023)
+    ReAct (Yao 2023)
   
 
     
@@ -667,6 +736,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -709,7 +786,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../agentic-rl/" class="md-nav__link ">
+            <a href="../../../agentic-rl/" class="md-nav__link ">
               
   
   
@@ -780,7 +857,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../multimodal/" class="md-nav__link ">
+            <a href="../../../multimodal/" class="md-nav__link ">
               
   
   
@@ -823,175 +900,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../multimodal/001-clip-radford-2021/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    001: CLIP (Radford 2021)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../diffusion/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Diffusion Course
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Diffusion Course
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../diffusion/001-score-matching-hyvarinen-2005/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    001: Score Matching (Hyvarinen 2005)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../diffusion/002-vincent-2011/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    002: DAE to SM Connection (Vincent 2011)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
     
     
       
@@ -1014,18 +922,18 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../systems/" class="md-nav__link ">
+            <a href="../../../multimodal/vlm-pretraining/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    LLM Systems
+    VLM Pretraining
   
 
     
@@ -1036,18 +944,18 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             
   
-    LLM Systems
+    VLM Pretraining
   
 
           </label>
@@ -1062,14 +970,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../systems/001-megatron-lm-shoeybi-2019/" class="md-nav__link">
+      <a href="../../../multimodal/vlm-pretraining/2021-02-26-clip-radford-2021/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    001: Megatron-LM (Shoeybi 2019)
+    CLIP (Radford 2021)
   
 
     
@@ -1086,102 +994,6 @@
           </ul>
         </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../labs/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lab Reports
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Lab Reports
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../labs/001-gpt-5-5-technical-report/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    001: GPT-5.5 Technical Report
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1227,18 +1039,18 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    Cross-Domain Review
+    Generative Models
   
 
     
@@ -1249,18 +1061,94 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_8" id="__nav_8_label" tabindex="">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Cross-Domain Review
+    Generative Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Score-Based Models
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_2" id="__nav_5_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Score-Based Models
   
 
           </label>
@@ -1275,14 +1163,336 @@
   
   
     <li class="md-nav__item">
-      <a href="cross-domain-week-23/" class="md-nav__link">
+      <a href="../2026-06-03-score-matching-hyvarinen-2005/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Cross-Domain Week 23
+    Score Matching (Hyvarinen 2005)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DAE to SM Connection (Vincent 2011)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DAE to SM Connection (Vincent 2011)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#historical-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📜 Historical Context
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Core Idea
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Impact
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modern-perspective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔭 Modern Perspective
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#researcher-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Researcher Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔬 Deep Exploration
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../llm-systems/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM Systems
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LLM Systems
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../llm-systems/distributed-training/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Distributed Training
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Distributed Training
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../llm-systems/distributed-training/2019-09-17-megatron-lm-shoeybi-2019/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Megatron-LM (Shoeybi 2019)
   
 
     
@@ -1302,6 +1512,376 @@
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../lab-reports/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab Reports
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lab Reports
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../lab-reports/weekly-lab-note/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Weekly Lab Note
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Weekly Lab Note
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lab-reports/weekly-lab-note/2026-04-23-gpt-5-5-technical-report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPT-5.5 Technical Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../cross-domain-summary/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cross-Domain Review
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cross-Domain Review
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../cross-domain-summary/weekly-synthesis/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Weekly Synthesis
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Weekly Synthesis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cross-domain-summary/weekly-synthesis/2026-06-06-weekly-synthesis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
@@ -1310,7 +1890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../timeline/" class="md-nav__link">
+      <a href="../../../timeline/" class="md-nav__link">
         
   
   
@@ -1337,7 +1917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../knowledge-graph/" class="md-nav__link">
+      <a href="../../../knowledge-graph/" class="md-nav__link">
         
   
   
@@ -1377,6 +1957,80 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#historical-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📜 Historical Context
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Core Idea
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Impact
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modern-perspective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔭 Modern Perspective
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#researcher-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Researcher Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔬 Deep Exploration
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1395,35 +2049,99 @@
   
 
 
-<h1 id="weekly-review">Weekly Review</h1>
-<p>跨领域总结与周回顾。</p>
-<table>
-<thead>
-<tr>
-<th>Week</th>
-<th>Date</th>
-<th>Summary</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>23</td>
-<td>2026-06-06</td>
-<td><a href="cross-domain-week-23/">Cross-Domain: Score Matching ↔ Systems ↔ Agentic AI</a></td>
-</tr>
-<tr>
-<td>23</td>
-<td>2026-06-07</td>
-<td><a href="weekly-week-23/">Weekly Review: First Week Launch</a></td>
-</tr>
-</tbody>
-</table>
+<h1 id="a-connection-between-score-matching-and-denoising-autoencoders">A Connection Between Score Matching and Denoising Autoencoders</h1>
+<p><strong>Pascal Vincent</strong> — Neural Computation, 2011</p>
+<h2 id="historical-context">📜 Historical Context</h2>
+<p><strong>Why did this work appear?</strong></p>
+<p>By 2011, two parallel lines of research had developed in unsupervised learning. On one side, <strong>denoising autoencoders (DAEs)</strong> — introduced by Vincent et al. in 2008 as a variant of standard autoencoders — had proven remarkably effective for unsupervised pretraining of deep architectures. DAEs corrupt an input with noise and train the network to reconstruct the original clean input. Despite their empirical success (competitive with RBMs for deep belief network pretraining), DAEs lacked a proper probabilistic interpretation — they were viewed as a heuristic denoising objective.</p>
+<p>On the other side, <strong>score matching</strong> (Hyvärinen, 2005) provided a principled statistical framework for training unnormalized density models, but with a computational bottleneck: the trace of the Hessian. Score matching was mathematically elegant but computationally expensive for high-dimensional data.</p>
+<p><strong>What problem was the field solving?</strong></p>
+<p>There was a gap between the practical success of DAEs and theoretical understanding of why they worked so well. If DAEs could be interpreted as proper probabilistic models, this would (a) justify architectural choices like tied weights, (b) enable sampling, and &copy; potentially bridge to other unsupervised learning frameworks. Additionally, the score matching community needed a computationally cheaper variant — if the DAE reconstruction loss could be shown to be a form of score matching, it would provide a practical, O(1) per-sample alternative to the Hessian-trace-based objective.</p>
+<h2 id="core-idea">💡 Core Idea</h2>
+<p><strong>What is the core idea?</strong></p>
+<p>Vincent proved that a <strong>denoising autoencoder trained with squared error and Gaussian corruption is implicitly performing score matching</strong>. Specifically:</p>
+<p>Let <span class="arithmatex">\(\tilde{p}_\sigma(\tilde{x} \mid x) = \mathcal{N}(\tilde{x}; x, \sigma^2 I)\)</span> be the corruption process, and let <span class="arithmatex">\(q_\sigma(\tilde{x}) = \int p_{\text{data}}(x) \cdot \tilde{p}_\sigma(\tilde{x} \mid x) \, dx\)</span> be the corrupted data distribution (a Parzen density estimate). The DAE learns a reconstruction function <span class="arithmatex">\(r_\theta(\tilde{x})\)</span> that minimizes <span class="arithmatex">\(\mathbb{E}\left[ \|r_\theta(\tilde{x}) - x\|^2 \right]\)</span>.</p>
+<p>Vincent showed that the optimal reconstruction function r*(x̃) satisfies:</p>
+<div class="arithmatex">\[
+r^*(\tilde{x}) - \tilde{x} = \sigma^2 \cdot \nabla_{\tilde{x}} \log q_{\sigma}(\tilde{x})
+\]</div>
+<p>That is, <strong>the residual of the optimal denoising autoencoder (the difference between reconstruction and input) is exactly proportional to the score of the Parzen density estimate</strong>. Since score matching aims to match the model's score to ∇ log q(x), and DAEs learn exactly this quantity at the optimal point, the DAE training criterion is equivalent to score matching.</p>
+<p><strong>Why does it work?</strong></p>
+<p>The key insight is that adding small Gaussian noise makes the data distribution smooth and differentiable, allowing the score to be well-defined everywhere. Under Gaussian corruption, Bayes' rule gives:</p>
+<div class="arithmatex">\[
+r^*(\tilde{x}) = \tilde{x} + \sigma^2 \cdot \nabla_{\tilde{x}} \log q_{\sigma}(\tilde{x})
+\]</div>
+<p>This means the DAE's reconstruction direction is the score direction — pointing toward higher data density. The DAE learns the vector field that pushes corrupted samples back toward the data manifold, which is exactly the gradient of the log-density. This is sometimes called <strong>denoising score matching</strong> or <strong>implicit score matching</strong>.</p>
+<p>The beauty is that this requires no second derivatives — just the standard DAE squared-error loss, which is O(1) per sample in the input dimension. The Hessian trace bottleneck of classical score matching is entirely bypassed.</p>
+<h2 id="impact">🔗 Impact</h2>
+<p><strong>What subsequent work did it influence?</strong></p>
+<ol>
+<li>
+<p><strong>Probabilistic interpretation of autoencoders:</strong> This paper provided the theoretical foundation for treating denoising autoencoders as energy-based models. It justified tied weights (encoder ≈ score estimation, decoder ≈ implicit integration) and enabled sampling from trained DAEs via Langevin dynamics.</p>
+</li>
+<li>
+<p><strong>Denoising Score Matching for Diffusion Models:</strong> The concept of "add noise, learn to denoise, that equals score estimation" is the direct precursor to denoising diffusion probabilistic models (DDPM, Ho et al., 2020). DDPM can be interpreted as a multi-scale version of denoising score matching — applying Vincent's insight at many noise levels simultaneously.</p>
+</li>
+<li>
+<p><strong>Noise Conditional Score Networks (Song &amp; Ermon, 2019):</strong> NCSN extends Vincent's framework by training a single score network at multiple noise levels using denoising score matching, with the added innovation of Langevin dynamics sampling.</p>
+</li>
+<li>
+<p><strong>Score SDE (Song et al., 2021):</strong> Generalizes Vincent's discrete noise levels to continuous diffusion processes, where the score matching objective becomes a continuous-time denoising objective.</p>
+</li>
+<li>
+<p><strong>Practical training for diffusion models:</strong> Modern diffusion model training (predicting noise ε, which is equivalent to score estimation up to a scaling factor) is a direct descendant of Vincent's insight — the simple L2 denoising objective that bypasses the computational bottleneck.</p>
+</li>
+</ol>
+<p><strong>Key research line:</strong> Denoising AE (Vincent+ 2008) → Score Matching connection (Vincent, 2011) → Generalized DAE (Bengio+ 2013) → DAE ≈ Score Matching formal proof (Alain &amp; Bengio, 2014) → NCSN (2019) → DDPM (2020) → Score SDE (2021) → EDM (2022) → Modern diffusion.</p>
+<h2 id="modern-perspective">🔭 Modern Perspective</h2>
+<p><strong>Looking back from 2026:</strong></p>
+<p><strong>Still important:</strong>
+- The equivalence between denoising and score matching is one of the most consequential theoretical results in modern generative AI. Every diffusion model that predicts noise (ε-prediction) or the clean image (x₀-prediction) is implicitly using Vincent's insight.
+- The idea that "denoising = score estimation" is now a standard textbook result taught in ML courses on generative models.
+- The computational insight — avoiding second derivatives by using a simple denoising loss — was prescient and is now the standard approach.</p>
+<p><strong>What evolved:</strong>
+- Vincent considered a single noise level σ; modern diffusion models use a full noise schedule (σ₁, σ₂, ..., σ_T) and score networks conditioned on the noise level (ε_θ(x_t, t)).
+- The original connection was for Gaussian corruption with isotropic noise; modern work extends this to more general corruption processes (e.g., masking in diffusion for language, blurring, etc.).
+- The Parzen density estimator interpretation (q_σ as a smoothed version of the data distribution) was specific to the Gaussian kernel. Modern score matching theory (Tweedie's formula) generalizes the insight beyond the Gaussian case.</p>
+<p><strong>What was limited:</strong>
+- Vincent's derivation assumed the optimal DAE reconstruction function, which in practice is approximated by a neural network. The quality of score estimation depends on the network capacity and optimization.
+- The single-noise-level limitation meant this wasn't directly useful for generating samples (Langevin dynamics at one noise level gets stuck in low-density regions). Multiple noise levels were needed — which the field figured out 8 years later.</p>
+<h2 id="researcher-takeaways">🎯 Researcher Takeaways</h2>
+<ol>
+<li>
+<p><strong>Bridge papers are incredibly valuable.</strong> Vincent didn't invent a new algorithm — he connected two existing ones. The paper is short (14 pages, many of which are derivations) and only has one core equation. Yet it's cited thousands of times because it fundamentally reshaped how we think about denoising autoencoders and score matching.</p>
+</li>
+<li>
+<p><strong>Providing a probabilistic interpretation changes practice.</strong> Before this paper, DAEs were a heuristic. After, they were a principled approach to density estimation. This shift enabled researchers to reason about DAEs theoretically, make architectural improvements, and connect them to the broader energy-based model literature.</p>
+</li>
+<li>
+<p><strong>Computational bottlenecks drive research.</strong> The Hessian trace issue in score matching was the key motivation. Vincent showed that denoising elegantly solves this — no second derivatives needed.</p>
+</li>
+<li>
+<p><strong>Watch for "obvious" connections that no one has made.</strong> In hindsight, the connection between "denoising" and "score estimation" seems almost trivial. But it took 3 years after DAEs were introduced (2008) and 6 years after score matching (2005) for someone to formally prove it.</p>
+</li>
+</ol>
+<h2 id="deep-exploration">🔬 Deep Exploration</h2>
+<p><strong>Tweedie's Formula and the DAE Score Connection.</strong></p>
+<p>Tweedie's formula, a classical result from statistics (Efron, 2011), provides a deep mathematical lens for understanding Vincent's DAE-score connection. For a random variable X with an exponential family distribution, the posterior expectation given a noisy observation X̃ = X + ε (with ε ~ N(0, σ²I)) is:</p>
+<div class="arithmatex">\[
+\mathbb{E}[X \mid \tilde{X} = \tilde{x}] = \tilde{x} + \sigma^2 \cdot \nabla_{\tilde{x}} \log p_{\sigma}(\tilde{x})
+\]</div>
+<p>where p_σ is the density of the noisy observations. This is exactly the equation Vincent derived for the optimal DAE reconstruction! Tweedie's formula explains why:
+- The DAE reconstruction residual (r*(x̃) − x̃) equals σ² times the score of the noisy data distribution
+- This holds for any distribution of X, as long as p_σ is well-defined and differentiable
+- The formula is intimately connected to empirical Bayes methods</p>
+<p>Understanding Tweedie's formula reveals that the DAE-score matching connection is not a coincidence but a fundamental statistical identity. Modern diffusion model training (epsilon-prediction) is literally Tweedie's formula applied at multiple noise scales. This connection also explains why diffusion models can be interpreted as learning the posterior expectation E[X₀ | X_t] — the denoising objective and the score-matching objective are two sides of the same coin.</p>
+<p>The mathematical depth here: Tweedie's formula → DAE reconstruction = score estimation → DDPM's epsilon-prediction = score estimation × scaling → this chain unifies classical statistics, unsupervised representation learning, and modern generative AI.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -1457,7 +2175,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../labs/001-gpt-5-5-technical-report/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 001: GPT-5.5 Technical Report">
+          <a href="../2026-06-03-score-matching-hyvarinen-2005/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Score Matching (Hyvarinen 2005)">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1467,20 +2185,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                001: GPT-5.5 Technical Report
+                Score Matching (Hyvarinen 2005)
               </div>
             </div>
           </a>
         
         
           
-          <a href="cross-domain-week-23/" class="md-footer__link md-footer__link--next" aria-label="Next: Cross-Domain Week 23">
+          <a href="../../../llm-systems/" class="md-footer__link md-footer__link--next" aria-label="Next: LLM Systems Course">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Cross-Domain Week 23
+                LLM Systems Course
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1543,12 +2261,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.code.annotate", "content.tabs.link", "header.autohide", "announce.dismiss"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.code.annotate", "content.tabs.link", "header.autohide", "announce.dismiss"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

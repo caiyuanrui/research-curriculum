@@ -10,29 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://caiyuanrui.github.io/research-curriculum/knowledge-graph/">
+        <link rel="canonical" href="https://caiyuanrui.github.io/research-curriculum/agents/agent-architectures/2022-10-06-react-yao-2022/">
       
       
-        <link rel="prev" href="../timeline/">
+        <link rel="prev" href="../">
       
+      
+        <link rel="next" href="../../../agentic-rl/">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Knowledge Graph - AI Tour</title>
+        <title>ReAct: Synergizing Reasoning and Acting in Language Models - AI Tour</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
   
@@ -118,9 +120,9 @@
     
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -147,7 +149,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#knowledge-graph" class="md-skip">
+        <a href="#react-synergizing-reasoning-and-acting-in-language-models" class="md-skip">
           Skip to content
         </a>
       
@@ -163,7 +165,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="AI Tour" class="md-header__button md-logo" aria-label="AI Tour" data-md-component="logo">
+    <a href="../../.." title="AI Tour" class="md-header__button md-logo" aria-label="AI Tour" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
@@ -183,7 +185,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Knowledge Graph
+              ReAct: Synergizing Reasoning and Acting in Language Models
             
           </span>
         </div>
@@ -288,7 +290,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -305,11 +307,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../agents/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -331,7 +335,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../agentic-rl/" class="md-tabs__link">
+        <a href="../../../agentic-rl/" class="md-tabs__link">
           
   
   
@@ -353,7 +357,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../multimodal/" class="md-tabs__link">
+        <a href="../../../multimodal/" class="md-tabs__link">
           
   
   
@@ -375,7 +379,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../generative-models/" class="md-tabs__link">
+        <a href="../../../generative-models/" class="md-tabs__link">
           
   
   
@@ -397,7 +401,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../llm-systems/" class="md-tabs__link">
+        <a href="../../../llm-systems/" class="md-tabs__link">
           
   
   
@@ -419,7 +423,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../lab-reports/" class="md-tabs__link">
+        <a href="../../../lab-reports/" class="md-tabs__link">
           
   
   
@@ -441,7 +445,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../cross-domain-summary/" class="md-tabs__link">
+        <a href="../../../cross-domain-summary/" class="md-tabs__link">
           
   
   
@@ -461,7 +465,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../timeline/" class="md-tabs__link">
+      <a href="../../../timeline/" class="md-tabs__link">
         
   
   
@@ -478,11 +482,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../../knowledge-graph/" class="md-tabs__link">
         
   
   
@@ -523,7 +525,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="AI Tour" class="md-nav__button md-logo" aria-label="AI Tour" data-md-component="logo">
+    <a href="../../.." title="AI Tour" class="md-nav__button md-logo" aria-label="AI Tour" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
@@ -553,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -577,6 +579,8 @@
       
   
   
+    
+  
   
   
     
@@ -592,20 +596,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../agents/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -623,13 +630,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -646,6 +653,8 @@
                 
   
   
+    
+  
   
   
     
@@ -663,18 +672,21 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../agents/agent-architectures/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -692,13 +704,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -715,10 +727,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../agents/agent-architectures/2022-10-06-react-yao-2022/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ReAct (Yao 2023)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -734,6 +773,109 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#historical-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historical Context
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Idea
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Idea">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompt-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompt Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#influence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Influence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modern-perspective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modern Perspective
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#research-takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Research Takeaway
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-deep-dive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional Deep Dive
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -784,7 +926,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../agentic-rl/" class="md-nav__link ">
+            <a href="../../../agentic-rl/" class="md-nav__link ">
               
   
   
@@ -855,7 +997,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../multimodal/" class="md-nav__link ">
+            <a href="../../../multimodal/" class="md-nav__link ">
               
   
   
@@ -924,7 +1066,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../multimodal/vlm-pretraining/" class="md-nav__link ">
+            <a href="../../../multimodal/vlm-pretraining/" class="md-nav__link ">
               
   
   
@@ -968,7 +1110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../multimodal/vlm-pretraining/2021-02-26-clip-radford-2021/" class="md-nav__link">
+      <a href="../../../multimodal/vlm-pretraining/2021-02-26-clip-radford-2021/" class="md-nav__link">
         
   
   
@@ -1036,7 +1178,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../generative-models/" class="md-nav__link ">
+            <a href="../../../generative-models/" class="md-nav__link ">
               
   
   
@@ -1107,7 +1249,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../generative-models/score-based-models/" class="md-nav__link ">
+            <a href="../../../generative-models/score-based-models/" class="md-nav__link ">
               
   
   
@@ -1151,7 +1293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../generative-models/score-based-models/2026-06-03-score-matching-hyvarinen-2005/" class="md-nav__link">
+      <a href="../../../generative-models/score-based-models/2026-06-03-score-matching-hyvarinen-2005/" class="md-nav__link">
         
   
   
@@ -1179,7 +1321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../generative-models/score-based-models/2026-06-03-dae-to-sm-connection-vincent-2011/" class="md-nav__link">
+      <a href="../../../generative-models/score-based-models/2026-06-03-dae-to-sm-connection-vincent-2011/" class="md-nav__link">
         
   
   
@@ -1247,7 +1389,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../llm-systems/" class="md-nav__link ">
+            <a href="../../../llm-systems/" class="md-nav__link ">
               
   
   
@@ -1316,7 +1458,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../llm-systems/distributed-training/" class="md-nav__link ">
+            <a href="../../../llm-systems/distributed-training/" class="md-nav__link ">
               
   
   
@@ -1360,7 +1502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../llm-systems/distributed-training/2019-09-17-megatron-lm-shoeybi-2019/" class="md-nav__link">
+      <a href="../../../llm-systems/distributed-training/2019-09-17-megatron-lm-shoeybi-2019/" class="md-nav__link">
         
   
   
@@ -1428,7 +1570,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../lab-reports/" class="md-nav__link ">
+            <a href="../../../lab-reports/" class="md-nav__link ">
               
   
   
@@ -1497,7 +1639,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../lab-reports/weekly-lab-note/" class="md-nav__link ">
+            <a href="../../../lab-reports/weekly-lab-note/" class="md-nav__link ">
               
   
   
@@ -1541,7 +1683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lab-reports/weekly-lab-note/2026-04-23-gpt-5-5-technical-report/" class="md-nav__link">
+      <a href="../../../lab-reports/weekly-lab-note/2026-04-23-gpt-5-5-technical-report/" class="md-nav__link">
         
   
   
@@ -1609,7 +1751,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../cross-domain-summary/" class="md-nav__link ">
+            <a href="../../../cross-domain-summary/" class="md-nav__link ">
               
   
   
@@ -1678,7 +1820,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../cross-domain-summary/weekly-synthesis/" class="md-nav__link ">
+            <a href="../../../cross-domain-summary/weekly-synthesis/" class="md-nav__link ">
               
   
   
@@ -1722,7 +1864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cross-domain-summary/weekly-synthesis/2026-06-06-weekly-synthesis/" class="md-nav__link">
+      <a href="../../../cross-domain-summary/weekly-synthesis/2026-06-06-weekly-synthesis/" class="md-nav__link">
         
   
   
@@ -1765,7 +1907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../timeline/" class="md-nav__link">
+      <a href="../../../timeline/" class="md-nav__link">
         
   
   
@@ -1789,37 +1931,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Knowledge Graph
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../knowledge-graph/" class="md-nav__link">
         
   
   
@@ -1835,115 +1950,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#concepts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Concepts
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Concepts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generative-models" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        generative-models
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#llm-systems" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        llm-systems
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lab-reports" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        lab-reports
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multimodal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        multimodal
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cross-course-connections" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cross-Course Connections
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Cross-Course Connections">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#agents" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        agents
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1975,55 +1981,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#concepts" class="md-nav__link">
+  <a href="#historical-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Concepts
+        Historical Context
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Concepts">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Idea
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Idea">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#generative-models" class="md-nav__link">
+  <a href="#prompt-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        generative-models
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#llm-systems" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        llm-systems
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lab-reports" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        lab-reports
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multimodal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        multimodal
+        Prompt Structure
       
     </span>
   </a>
@@ -2036,30 +2020,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cross-course-connections" class="md-nav__link">
+  <a href="#influence" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cross-Course Connections
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Cross-Course Connections">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#agents" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        agents
+        Influence
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#modern-perspective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modern Perspective
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#research-takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Research Takeaway
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-deep-dive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional Deep Dive
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2083,74 +2083,82 @@
   
 
 
-<h1 id="knowledge-graph">Knowledge Graph</h1>
-<p>概念关系图——跨课程的知识关联。</p>
-<h2 id="concepts">Concepts</h2>
-<h3 id="generative-models">generative-models</h3>
+<h1 id="react-synergizing-reasoning-and-acting-in-language-models">ReAct: Synergizing Reasoning and Acting in Language Models</h1>
+<p><strong>Authors:</strong> Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan, Yuan Cao
+<strong>Year:</strong> 2023 | <strong>Venue:</strong> ICLR 2023
+<strong>Link:</strong> <a href="https://arxiv.org/abs/2210.03629">arXiv:2210.03629</a></p>
+<hr />
+<h2 id="historical-context">Historical Context</h2>
+<p>By late 2022, large language models (LLMs) had demonstrated two powerful but separately studied capabilities. <strong>Chain-of-Thought (CoT) prompting</strong> (Wei et al., 2022) showed that asking an LLM to "think step by step" dramatically improved reasoning on math, logic, and multi-step QA tasks. Separately, <strong>act-only approaches</strong> used LLMs to generate action plans for interactive environments like web navigation and text-based games. However, each approach had critical weaknesses: reasoning-only (CoT) had no access to external knowledge and suffered from hallucination and error propagation; act-only lacked abstract reasoning and working memory, making it brittle on long-horizon tasks. The research community lacked a unified paradigm that could simultaneously leverage the strengths of both reasoning and acting.</p>
+<h2 id="core-idea">Core Idea</h2>
+<p>ReAct (Reason + Act) proposes an elegantly simple prompting paradigm: <strong>interleave verbal reasoning traces with task-specific actions</strong> in a single trajectory. The LLM generates a sequence where each step is either a <em>thought</em> (internal reasoning that updates the model's context but does not affect the environment) or an <em>action</em> (external interaction that produces observations from tools/environments).</p>
+<p>The synergy is bidirectional:</p>
 <ul>
-<li><strong>Score Function</strong> (<a href="../generative-models/score-based-models/2026-06-03-score-matching-hyvarinen-2005/">Hyvärinen 2005</a>) — Gradient of log-density; key concept for training unnormalized models</li>
-<li><strong>Score Matching</strong> (<a href="../generative-models/score-based-models/2026-06-03-score-matching-hyvarinen-2005/">Hyvärinen 2005</a>) — Training objective that matches model score to data score</li>
-<li><strong>Denoising Autoencoder</strong> (<a href="../generative-models/score-based-models/2026-06-03-dae-to-sm-connection-vincent-2011/">Vincent 2011</a>) — Neural network that learns to reconstruct clean input from corrupted input</li>
-<li><strong>Denoising Score Matching</strong> (<a href="../generative-models/score-based-models/2026-06-03-dae-to-sm-connection-vincent-2011/">Vincent 2011</a>) — Equivalence between DAE reconstruction and score estimation</li>
-<li><strong>Tweedie's Formula</strong> (<a href="../generative-models/score-based-models/2026-06-03-dae-to-sm-connection-vincent-2011/">Vincent 2011</a>) — Statistical identity connecting posterior expectation and score</li>
+<li><strong>Reason to Act:</strong> Reasoning traces help the model induce, track, and update high-level plans, decompose complex goals, inject commonsense knowledge, and handle exceptions during action execution.</li>
+<li><strong>Act to Reason:</strong> Actions allow the model to interface with external sources (e.g., a Wikipedia API, a game simulator, a web interface) to gather additional information that feeds back into reasoning, anchoring thought to grounded observation rather than parametric hallucination.</li>
 </ul>
-<h3 id="llm-systems">llm-systems</h3>
-<ul>
-<li><strong>Model Parallelism</strong> (<a href="../llm-systems/distributed-training/2019-09-17-megatron-lm-shoeybi-2019/">Shoeybi 2019</a>) — Splitting model parameters across GPUs within a single layer</li>
-<li><strong>Intra-layer Tensor Parallelism</strong> (<a href="../llm-systems/distributed-training/2019-09-17-megatron-lm-shoeybi-2019/">Shoeybi 2019</a>) — Column/row-wise partition of weight matrices</li>
-<li><strong>All-Reduce Communication</strong> (<a href="../llm-systems/distributed-training/2019-09-17-megatron-lm-shoeybi-2019/">Shoeybi 2019</a>) — Communication pattern at layer boundaries</li>
-<li><strong>Scaling Efficiency</strong> (<a href="../llm-systems/distributed-training/2019-09-17-megatron-lm-shoeybi-2019/">Shoeybi 2019</a>) — 76% efficiency on 512 GPUs for 8.3B parameter models</li>
-</ul>
-<h3 id="lab-reports">lab-reports</h3>
-<ul>
-<li><strong>Agentic Coding</strong> (<a href="../lab-reports/weekly-lab-note/2026-04-23-gpt-5-5-technical-report/">GPT-5.5 Tech Report</a>) — Frontier model achieving 82.7% on Terminal-Bench 2.0 for autonomous software engineering</li>
-<li><strong>Token Efficiency</strong> (<a href="../lab-reports/weekly-lab-note/2026-04-23-gpt-5-5-technical-report/">GPT-5.5 Tech Report</a>) — Correlates reduced token usage with deeper task understanding</li>
-<li><strong>Destructive Action Avoidance</strong> (<a href="../lab-reports/weekly-lab-note/2026-04-23-gpt-5-5-technical-report/">GPT-5.5 Tech Report</a>) — Safety metric for agentic rollouts: 52% perfect reversion rate</li>
-<li><strong>FrontierMath</strong> (<a href="../lab-reports/weekly-lab-note/2026-04-23-gpt-5-5-technical-report/">GPT-5.5 Tech Report</a>) — 35.4% on Tier 4 math problems; discovered new Ramsey number proof</li>
-<li><strong>Multiturn Jailbreak Evaluation</strong> (<a href="../lab-reports/weekly-lab-note/2026-04-23-gpt-5-5-technical-report/">GPT-5.5 Tech Report</a>) — Novel adversary simulation protocol replacing StrongReject</li>
-</ul>
-<h3 id="multimodal">multimodal</h3>
-<ul>
-<li><strong>Contrastive Vision-Language Pretraining</strong> (<a href="../multimodal/vlm-pretraining/2021-02-26-clip-radford-2021/">CLIP 2021</a>) — Train dual encoders (image + text) with contrastive loss on 400M image-text pairs for zero-shot transfer</li>
-<li><strong>Zero-shot Image Classification</strong> (<a href="../multimodal/vlm-pretraining/2021-02-26-clip-radford-2021/">CLIP 2021</a>) — Use natural language prompts as classifiers without any dataset-specific training</li>
-<li><strong>Dual-Encoder Architecture</strong> (<a href="../multimodal/vlm-pretraining/2021-02-26-clip-radford-2021/">CLIP 2021</a>) — Separate image encoder (ResNet/ViT) and text encoder (Transformer) aligned via cosine similarity</li>
-<li><strong>Prompt Engineering for Vision</strong> (<a href="../multimodal/vlm-pretraining/2021-02-26-clip-radford-2021/">CLIP 2021</a>) — Template-based prompting ("a photo of a {class}") significantly improves zero-shot accuracy</li>
-<li><strong>InfoNCE Contrastive Loss</strong> (<a href="../multimodal/vlm-pretraining/2021-02-26-clip-radford-2021/">CLIP 2021</a>) — Symmetric cross-entropy over N×N similarity matrix with learned temperature τ</li>
-</ul>
-<h2 id="cross-course-connections">Cross-Course Connections</h2>
-<ul>
-<li><strong>Model Parallelism → Large-scale Training</strong> — The scaling techniques pioneered in Megatron-LM (tensor parallelism) are prerequisites for training the massive diffusion models covered in the generative models course, enabling multi-billion parameter vision models</li>
-<li><strong>All-Reduce → Distributed Systems</strong> — The communication-efficient patterns established here underpin modern LLM serving systems (vLLM, SGLang) and their distributed inference architectures</li>
-<li><strong>Agentic Coding → LLM Systems</strong> — GPT-5.5's 82.7% on Terminal-Bench 2.0 requires underlying infrastructure (vLLM, FlashAttention, PagedAttention) studied in the LLM Systems course</li>
-<li><strong>Bottleneck Elimination Pattern</strong> (<a href="../cross-domain-summary/weekly-synthesis/2026-06-06-weekly-synthesis/">cross-domain week-23</a>) — Score matching, denoising score matching, and Megatron-LM all identify a core computational bottleneck and solve it through mathematical/engineering reframing rather than brute force</li>
-<li><strong>Denoising as Universal Learning Principle</strong> (<a href="../cross-domain-summary/weekly-synthesis/2026-06-06-weekly-synthesis/">cross-domain week-23</a>) — Vincent's DAE-score connection, GPT-5.5's RL from internal CoT, and modern diffusion training all share the "add noise → learn to denoise → learn distribution/reasoning" pattern</li>
-<li><strong>Multi-scale Gradient Information</strong> (<a href="../cross-domain-summary/weekly-synthesis/2026-06-06-weekly-synthesis/">cross-domain week-23</a>) — Score matching operates on data-space gradients (∇ₓ log p), Megatron on parameter-space gradients (∇_θ ℒ), GPT-5.5 on reasoning-space "gradients" (RL reward signals)</li>
-</ul>
-<h3 id="agents">agents</h3>
-<ul>
-<li><strong>ReAct Prompting</strong> (<a href="../agents/agent-architectures/2022-10-06-react-yao-2022/">Yao 2023</a>) — Interleaved reasoning traces and task-specific actions for LLM agents</li>
-<li><strong>Reasoning-Action Synergy</strong> (<a href="../agents/agent-architectures/2022-10-06-react-yao-2022/">Yao 2023</a>) — Bidirectional benefit: reasoning guides action planning, actions ground reasoning in external observation</li>
-<li><strong>Thought-Action-Observation Loop</strong> (<a href="../agents/agent-architectures/2022-10-06-react-yao-2022/">Yao 2023</a>) — Canonical format (Thought → Action → Observation → Thought) underlying modern agent frameworks</li>
-<li><strong>ReAct + CoT Hybrid</strong> (<a href="../agents/agent-architectures/2022-10-06-react-yao-2022/">Yao 2023</a>) — Combining parametric knowledge with external grounding outperforms either alone</li>
-<li><strong>In-context Agent Design</strong> (<a href="../agents/agent-architectures/2022-10-06-react-yao-2022/">Yao 2023</a>) — Zero-additional-training agents via few-shot prompting with 1-2 examples</li>
-</ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>graph LR
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    SM[Score Matching] --&gt; DAE[Denoising Autoencoders]
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    DAE --&gt; SG[Score-Based Gen Models]
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    SM --&gt; SSM[Sliced Score Matching]
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    TP[Tensor Parallelism] --&gt; PS[Parallel Systems]
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    PS --&gt; LI[LLM Inference]
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    TP --&gt; 3D[3D Parallelism]
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    3D --&gt; Z[ZeRO/FSDP]
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    AC[Agentic Coding] --&gt; LI
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    AC --&gt; SS[Safety Systems]
+<p>Crucially, ReAct requires <strong>no additional training or fine-tuning</strong> — it is a pure prompting strategy using 1-2 few-shot in-context examples. The architecture can be a frozen large LM (the paper uses PaLM-540B) or a smaller fine-tuned model trained on successful ReAct trajectories.</p>
+<h3 id="prompt-structure">Prompt Structure</h3>
+<p>A ReAct prompt consists of interleaved turns labeled with clear prefixes:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Thought: I need to find out when the Transformer architecture was introduced.
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Action: Search[Transformer architecture introduction date]
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Observation: &quot;Attention Is All You Need&quot; was published in 2017.
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Thought: The Transformer was introduced in 2017. Now I should verify this.
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Action: Finish[The Transformer architecture was introduced in the 2017 paper &quot;Attention Is All You Need&quot;]
 </span></code></pre></div>
+<p>This structure makes the agent's decision process fully transparent and editable — a human can intervene to correct a hallucinating reasoning trace mid-trajectory.</p>
+<h2 id="influence">Influence</h2>
+<p>ReAct has been enormously influential — with over 11,000 citations as of 2026 — and fundamentally shaped the modern LLM agent paradigm:</p>
+<ol>
+<li>
+<p><strong>Industry Standard:</strong> The ReAct pattern (Thought → Action → Observation → Thought) is the default prompt format for virtually every LLM agent framework — LangChain, AutoGen, CrewAI, and countless others adopt ReAct-style interleaved reasoning.</p>
+</li>
+<li>
+<p><strong>Foundation for Extensions:</strong> Nearly all subsequent agentic reasoning systems build directly on ReAct's interleaved paradigm:</p>
+</li>
+<li><strong>Reflexion</strong> adds self-evaluation after ReAct trajectories</li>
+<li><strong>ReWOO</strong> decouples reasoning from observation for efficiency</li>
+<li><strong>AutoGen</strong> extends the pattern to multi-agent conversations</li>
+<li><strong>Voyager</strong> applies ReAct-style interleaving to long-horizon Minecraft agents</li>
+<li>
+<p><strong>SWE-agent</strong> uses ReAct-style formats for software engineering tasks</p>
+</li>
+<li>
+<p><strong>Benchmark Impact:</strong> ReAct set new SOTA on four diverse benchmarks (HotpotQA, Fever, ALFWorld, WebShop) using only few-shot prompting, showing the paradigm's generality across language understanding and interactive decision making.</p>
+</li>
+<li>
+<p><strong>Interpretability:</strong> By making reasoning traces visible and editable, ReAct opened new directions for human-in-the-loop AI systems and transparent decision-making.</p>
+</li>
+</ol>
+<h2 id="modern-perspective">Modern Perspective</h2>
+<p>ReAct's core insight — that reasoning and acting are synergistic, not alternatives — remains one of the most productive ideas in LLM agent research. Today (2026), every major production agent system uses some variant of the ReAct pattern.</p>
+<p><strong>What has aged well:</strong>
+- The interleaved reasoning-action loop is now canonical
+- The modular separation of "thought" and "action" enabled the entire ecosystem of agent frameworks
+- The finding that a simple prompting strategy can outperform supervised methods trained on ~100K examples is even more relevant today as frontier models continue to improve
+- The interpretability and human-editability of ReAct trajectories remain underexploited advantages</p>
+<p><strong>What has evolved:</strong>
+- Modern agents typically use fine-tuned models rather than pure prompting, achieving much higher reliability
+- The simple ReAct loop has been extended with memory, reflection, planning hierarchies, and multi-agent coordination
+- Tool-calling APIs (function calling in GPT-4+, Claude tools) have made the action format more structured and reliable than free-form text actions
+- Post-training with reinforcement learning (e.g., RL from tool-use feedback) now produces substantially more capable agents</p>
+<p><strong>What remains challenging:</strong>
+- Error propagation: a single bad reasoning step can derail the entire trajectory
+- Token cost: full ReAct trajectories on long tasks consume substantial context
+- The "reasoning gap": smaller models prompted with ReAct show inconsistent reasoning quality</p>
+<h2 id="research-takeaway">Research Takeaway</h2>
+<p>ReAct's most important lesson is architectural: <strong>separation of concerns</strong> — reasoning traces manage internal state and planning, while actions manage external interaction — is the key design principle for building robust LLM agents. This simple decomposition, validated by the paper's results, has become the universal blueprint for agentic systems. As a researcher, the takeaway is to look for opportunities to create clean interfaces between cognitive modules (reasoning, memory, planning, tool-use) rather than monolithic approaches.</p>
+<h2 id="optional-deep-dive">Optional Deep Dive</h2>
+<p>The paper's most technically interesting result is the <strong>ReAct + CoT hybrid</strong>. The authors found that ReAct alone sometimes underperforms CoT on reasoning-heavy QA tasks (e.g., HotpotQA) because the LLM's own parametric knowledge embedded in the CoT reasoning trace can fill gaps that external search cannot efficiently cover. By combining both — first prompting with CoT to extract parametric knowledge, then switching to ReAct for external grounding — the hybrid approach achieves the best of both worlds (35.1 on HotpotQA vs. 29.4 for CoT-only and 27.4 for ReAct-only). This insight that <strong>internal knowledge and external grounding are complementary, not competing</strong>, has been repeatedly validated in subsequent systems.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -2184,7 +2192,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../timeline/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Timeline">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Agent Architectures">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2194,11 +2202,27 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Timeline
+                Agent Architectures
               </div>
             </div>
           </a>
         
+        
+          
+          <a href="../../../agentic-rl/" class="md-footer__link md-footer__link--next" aria-label="Next: Agentic RL Course">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Agentic RL Course
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
@@ -2254,12 +2278,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.code.annotate", "content.tabs.link", "header.autohide", "announce.dismiss"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.code.annotate", "content.tabs.link", "header.autohide", "announce.dismiss"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

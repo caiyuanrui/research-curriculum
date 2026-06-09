@@ -10,31 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://caiyuanrui.github.io/research-curriculum/diffusion/">
+        <link rel="canonical" href="https://caiyuanrui.github.io/research-curriculum/generative-models/score-based-models/">
       
       
-        <link rel="prev" href="../multimodal/001-clip-radford-2021/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="001-score-matching-hyvarinen-2005/">
+        <link rel="next" href="2026-06-03-score-matching-hyvarinen-2005/">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Diffusion Course - AI Tour</title>
+        <title>Score-Based Models - AI Tour</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
   
@@ -120,9 +120,9 @@
     
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -149,7 +149,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#diffusion-course" class="md-skip">
+        <a href="#score-based-models" class="md-skip">
           Skip to content
         </a>
       
@@ -165,7 +165,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="AI Tour" class="md-header__button md-logo" aria-label="AI Tour" data-md-component="logo">
+    <a href="../.." title="AI Tour" class="md-header__button md-logo" aria-label="AI Tour" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
@@ -185,7 +185,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Diffusion Course
+              Score-Based Models
             
           </span>
         </div>
@@ -290,7 +290,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -311,7 +311,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../agent/" class="md-tabs__link">
+        <a href="../../agents/" class="md-tabs__link">
           
   
   
@@ -333,7 +333,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../agentic-rl/" class="md-tabs__link">
+        <a href="../../agentic-rl/" class="md-tabs__link">
           
   
   
@@ -355,7 +355,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../multimodal/" class="md-tabs__link">
+        <a href="../../multimodal/" class="md-tabs__link">
           
   
   
@@ -379,13 +379,13 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../" class="md-tabs__link">
           
   
   
     
   
-  Diffusion Course
+  Generative Models
 
         </a>
       </li>
@@ -401,7 +401,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../systems/" class="md-tabs__link">
+        <a href="../../llm-systems/" class="md-tabs__link">
           
   
   
@@ -423,7 +423,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../labs/" class="md-tabs__link">
+        <a href="../../lab-reports/" class="md-tabs__link">
           
   
   
@@ -445,7 +445,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../weekly-review/" class="md-tabs__link">
+        <a href="../../cross-domain-summary/" class="md-tabs__link">
           
   
   
@@ -465,7 +465,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../timeline/" class="md-tabs__link">
+      <a href="../../timeline/" class="md-tabs__link">
         
   
   
@@ -484,7 +484,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../knowledge-graph/" class="md-tabs__link">
+      <a href="../../knowledge-graph/" class="md-tabs__link">
         
   
   
@@ -525,7 +525,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="AI Tour" class="md-nav__button md-logo" aria-label="AI Tour" data-md-component="logo">
+    <a href="../.." title="AI Tour" class="md-nav__button md-logo" aria-label="AI Tour" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
@@ -555,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -607,7 +607,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../agent/" class="md-nav__link ">
+            <a href="../../agents/" class="md-nav__link ">
               
   
   
@@ -650,15 +650,84 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../agents/agent-architectures/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Architectures
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent Architectures
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../agent/001-react-yao-2022/" class="md-nav__link">
+      <a href="../../agents/agent-architectures/2022-10-06-react-yao-2022/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    001: ReAct (Yao 2023)
+    ReAct (Yao 2023)
   
 
     
@@ -667,6 +736,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -709,7 +786,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../agentic-rl/" class="md-nav__link ">
+            <a href="../../agentic-rl/" class="md-nav__link ">
               
   
   
@@ -780,7 +857,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../multimodal/" class="md-nav__link ">
+            <a href="../../multimodal/" class="md-nav__link ">
               
   
   
@@ -823,15 +900,84 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../multimodal/vlm-pretraining/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VLM Pretraining
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VLM Pretraining
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../multimodal/001-clip-radford-2021/" class="md-nav__link">
+      <a href="../../multimodal/vlm-pretraining/2021-02-26-clip-radford-2021/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    001: CLIP (Radford 2021)
+    CLIP (Radford 2021)
   
 
     
@@ -840,6 +986,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -869,8 +1023,6 @@
       
         
       
-        
-      
     
     
     
@@ -891,14 +1043,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    Diffusion Course
+    Generative Models
   
 
     
@@ -909,7 +1061,7 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_5" id="__nav_5_label" tabindex="">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -920,7 +1072,83 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Diffusion Course
+    Generative Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Score-Based Models
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Score-Based Models
   
 
           </label>
@@ -935,14 +1163,14 @@
   
   
     <li class="md-nav__item">
-      <a href="001-score-matching-hyvarinen-2005/" class="md-nav__link">
+      <a href="2026-06-03-score-matching-hyvarinen-2005/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    001: Score Matching (Hyvarinen 2005)
+    Score Matching (Hyvarinen 2005)
   
 
     
@@ -963,14 +1191,14 @@
   
   
     <li class="md-nav__item">
-      <a href="002-vincent-2011/" class="md-nav__link">
+      <a href="2026-06-03-dae-to-sm-connection-vincent-2011/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    002: DAE to SM Connection (Vincent 2011)
+    DAE to SM Connection (Vincent 2011)
   
 
     
@@ -979,6 +1207,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1023,7 +1259,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../systems/" class="md-nav__link ">
+            <a href="../../llm-systems/" class="md-nav__link ">
               
   
   
@@ -1066,15 +1302,84 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../llm-systems/distributed-training/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Distributed Training
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Distributed Training
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../systems/001-megatron-lm-shoeybi-2019/" class="md-nav__link">
+      <a href="../../llm-systems/distributed-training/2019-09-17-megatron-lm-shoeybi-2019/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    001: Megatron-LM (Shoeybi 2019)
+    Megatron-LM (Shoeybi 2019)
   
 
     
@@ -1083,6 +1388,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1127,7 +1440,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../labs/" class="md-nav__link ">
+            <a href="../../lab-reports/" class="md-nav__link ">
               
   
   
@@ -1170,15 +1483,84 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../lab-reports/weekly-lab-note/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Weekly Lab Note
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Weekly Lab Note
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../labs/001-gpt-5-5-technical-report/" class="md-nav__link">
+      <a href="../../lab-reports/weekly-lab-note/2026-04-23-gpt-5-5-technical-report/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    001: GPT-5.5 Technical Report
+    GPT-5.5 Technical Report
   
 
     
@@ -1187,6 +1569,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1231,7 +1621,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../weekly-review/" class="md-nav__link ">
+            <a href="../../cross-domain-summary/" class="md-nav__link ">
               
   
   
@@ -1274,15 +1664,84 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../cross-domain-summary/weekly-synthesis/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Weekly Synthesis
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Weekly Synthesis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../weekly-review/cross-domain-week-23/" class="md-nav__link">
+      <a href="../../cross-domain-summary/weekly-synthesis/2026-06-06-weekly-synthesis/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Cross-Domain Week 23
+    Week 23
   
 
     
@@ -1302,6 +1761,14 @@
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
@@ -1310,7 +1777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../timeline/" class="md-nav__link">
+      <a href="../../timeline/" class="md-nav__link">
         
   
   
@@ -1337,7 +1804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../knowledge-graph/" class="md-nav__link">
+      <a href="../../knowledge-graph/" class="md-nav__link">
         
   
   
@@ -1384,10 +1851,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#progress" class="md-nav__link">
+  <a href="#reading-notes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Progress
+        Reading notes
       
     </span>
   </a>
@@ -1414,30 +1881,24 @@
   
 
 
-<h1 id="diffusion-course">Diffusion Course</h1>
-<p>扩散模型——从 Score Matching 到生成式 AI 前沿。</p>
-<h2 id="progress">Progress</h2>
+<h1 id="score-based-models">Score-Based Models</h1>
+<p>Question: How does score estimation define generation?</p>
+<h2 id="reading-notes">Reading notes</h2>
 <table>
 <thead>
 <tr>
-<th>#</th>
 <th>Date</th>
 <th>Paper</th>
-<th>Status</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
 <td>2026-06-03</td>
-<td><a href="001-score-matching-hyvarinen-2005/">Estimation of Non-Normalized Statistical Models by Score Matching</a></td>
-<td>✅</td>
+<td><a href="2026-06-03-score-matching-hyvarinen-2005/">Estimation of Non-Normalized Statistical Models by Score Matching</a></td>
 </tr>
 <tr>
-<td>2</td>
 <td>2026-06-03</td>
-<td><a href="002-vincent-2011/">A Connection Between Score Matching and Denoising Autoencoders</a></td>
-<td>✅</td>
+<td><a href="2026-06-03-dae-to-sm-connection-vincent-2011/">A Connection Between Score Matching and Denoising Autoencoders</a></td>
 </tr>
 </tbody>
 </table>
@@ -1480,7 +1941,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../multimodal/001-clip-radford-2021/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 001: CLIP (Radford 2021)">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Generative Models Course">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1490,20 +1951,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                001: CLIP (Radford 2021)
+                Generative Models Course
               </div>
             </div>
           </a>
         
         
           
-          <a href="001-score-matching-hyvarinen-2005/" class="md-footer__link md-footer__link--next" aria-label="Next: 001: Score Matching (Hyvarinen 2005)">
+          <a href="2026-06-03-score-matching-hyvarinen-2005/" class="md-footer__link md-footer__link--next" aria-label="Next: Score Matching (Hyvarinen 2005)">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                001: Score Matching (Hyvarinen 2005)
+                Score Matching (Hyvarinen 2005)
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1566,12 +2027,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.code.annotate", "content.tabs.link", "header.autohide", "announce.dismiss"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.code.annotate", "content.tabs.link", "header.autohide", "announce.dismiss"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

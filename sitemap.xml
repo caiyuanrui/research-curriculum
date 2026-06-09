@@ -13,35 +13,71 @@
          <lastmod>2026-06-09</lastmod>
     </url>
     <url>
-         <loc>https://caiyuanrui.github.io/research-curriculum/agent/</loc>
-         <lastmod>2026-06-09</lastmod>
-    </url>
-    <url>
-         <loc>https://caiyuanrui.github.io/research-curriculum/agent/001-react-yao-2022/</loc>
-         <lastmod>2026-06-09</lastmod>
-    </url>
-    <url>
          <loc>https://caiyuanrui.github.io/research-curriculum/agentic-rl/</loc>
          <lastmod>2026-06-09</lastmod>
     </url>
     <url>
-         <loc>https://caiyuanrui.github.io/research-curriculum/diffusion/</loc>
+         <loc>https://caiyuanrui.github.io/research-curriculum/agents/</loc>
          <lastmod>2026-06-09</lastmod>
     </url>
     <url>
-         <loc>https://caiyuanrui.github.io/research-curriculum/diffusion/001-score-matching-hyvarinen-2005/</loc>
+         <loc>https://caiyuanrui.github.io/research-curriculum/agents/agent-architectures/</loc>
          <lastmod>2026-06-09</lastmod>
     </url>
     <url>
-         <loc>https://caiyuanrui.github.io/research-curriculum/diffusion/002-vincent-2011/</loc>
+         <loc>https://caiyuanrui.github.io/research-curriculum/agents/agent-architectures/2022-10-06-react-yao-2022/</loc>
          <lastmod>2026-06-09</lastmod>
     </url>
     <url>
-         <loc>https://caiyuanrui.github.io/research-curriculum/labs/</loc>
+         <loc>https://caiyuanrui.github.io/research-curriculum/cross-domain-summary/</loc>
          <lastmod>2026-06-09</lastmod>
     </url>
     <url>
-         <loc>https://caiyuanrui.github.io/research-curriculum/labs/001-gpt-5-5-technical-report/</loc>
+         <loc>https://caiyuanrui.github.io/research-curriculum/cross-domain-summary/weekly-synthesis/</loc>
+         <lastmod>2026-06-09</lastmod>
+    </url>
+    <url>
+         <loc>https://caiyuanrui.github.io/research-curriculum/cross-domain-summary/weekly-synthesis/2026-06-06-weekly-synthesis/</loc>
+         <lastmod>2026-06-09</lastmod>
+    </url>
+    <url>
+         <loc>https://caiyuanrui.github.io/research-curriculum/generative-models/</loc>
+         <lastmod>2026-06-09</lastmod>
+    </url>
+    <url>
+         <loc>https://caiyuanrui.github.io/research-curriculum/generative-models/score-based-models/</loc>
+         <lastmod>2026-06-09</lastmod>
+    </url>
+    <url>
+         <loc>https://caiyuanrui.github.io/research-curriculum/generative-models/score-based-models/2026-06-03-dae-to-sm-connection-vincent-2011/</loc>
+         <lastmod>2026-06-09</lastmod>
+    </url>
+    <url>
+         <loc>https://caiyuanrui.github.io/research-curriculum/generative-models/score-based-models/2026-06-03-score-matching-hyvarinen-2005/</loc>
+         <lastmod>2026-06-09</lastmod>
+    </url>
+    <url>
+         <loc>https://caiyuanrui.github.io/research-curriculum/lab-reports/</loc>
+         <lastmod>2026-06-09</lastmod>
+    </url>
+    <url>
+         <loc>https://caiyuanrui.github.io/research-curriculum/lab-reports/weekly-lab-note/</loc>
+         <lastmod>2026-06-09</lastmod>
+    </url>
+    <url>
+         <loc>https://caiyuanrui.github.io/research-curriculum/lab-reports/weekly-lab-note/2026-04-23-gpt-5-5-technical-report/</loc>
+         <lastmod>2026-06-09</lastmod>
+    </url>
+    <url>
+         <loc>https://caiyuanrui.github.io/research-curriculum/llm-systems/</loc>
+         <lastmod>2026-06-09</lastmod>
+    </url>
+    <url>
+         <loc>https://caiyuanrui.github.io/research-curriculum/llm-systems/distributed-training/</loc>
+         <lastmod>2026-06-09</lastmod>
+    </url>
+    <url>
+         <loc>https://caiyuanrui.github.io/research-curriculum/llm-systems/distributed-training/2019-09-17-megatron-lm-shoeybi-2019/</loc>
          <lastmod>2026-06-09</lastmod>
     </url>
     <url>
@@ -49,27 +85,11 @@
          <lastmod>2026-06-09</lastmod>
     </url>
     <url>
-         <loc>https://caiyuanrui.github.io/research-curriculum/multimodal/001-clip-radford-2021/</loc>
+         <loc>https://caiyuanrui.github.io/research-curriculum/multimodal/vlm-pretraining/</loc>
          <lastmod>2026-06-09</lastmod>
     </url>
     <url>
-         <loc>https://caiyuanrui.github.io/research-curriculum/systems/</loc>
-         <lastmod>2026-06-09</lastmod>
-    </url>
-    <url>
-         <loc>https://caiyuanrui.github.io/research-curriculum/systems/001-megatron-lm-shoeybi-2019/</loc>
-         <lastmod>2026-06-09</lastmod>
-    </url>
-    <url>
-         <loc>https://caiyuanrui.github.io/research-curriculum/weekly-review/</loc>
-         <lastmod>2026-06-09</lastmod>
-    </url>
-    <url>
-         <loc>https://caiyuanrui.github.io/research-curriculum/weekly-review/cross-domain-week-23/</loc>
-         <lastmod>2026-06-09</lastmod>
-    </url>
-    <url>
-         <loc>https://caiyuanrui.github.io/research-curriculum/weekly-review/weekly-week-23/</loc>
+         <loc>https://caiyuanrui.github.io/research-curriculum/multimodal/vlm-pretraining/2021-02-26-clip-radford-2021/</loc>
          <lastmod>2026-06-09</lastmod>
     </url>
 </urlset>
