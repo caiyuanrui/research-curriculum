@@ -4,9 +4,9 @@ authors: Pascal Vincent
 year: 2011
 venue: Neural Computation, Vol. 23(7), pp. 1661–1674
 date: 2026-06-03
-course: diffusion
+course: "generative-models-course"
 tags: [score-matching, denoising-autoencoders, classic]
-order: 2
+phase: "score-based-models"
 ---
 
 # A Connection Between Score Matching and Denoising Autoencoders

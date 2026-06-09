@@ -4,9 +4,9 @@ authors: "Mohammad Shoeybi, Mostofa Patwary, Raul Puri, Patrick LeGresley, Jared
 year: 2019
 venue: "SC 2020 (Supercomputing)"
 date: 2019-09-17
-course: llm-systems
+course: "llm-systems-course"
 tags: [model-parallelism, distributed-training, transformers, megatron]
-phase: "megatron"
+phase: "distributed-training"
 order: 1
 ---
 

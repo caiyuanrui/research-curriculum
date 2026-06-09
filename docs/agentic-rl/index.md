@@ -1,9 +1,5 @@
-# Agentic RL
+# Agentic RL Course
 
-将强化学习应用于 AI Agent 的训练、推理和工具使用。
+RLHF, RLAIF, online RL, verifiers, environment design, and RL for agent behavior.
 
-## Progress
-
-| # | Date | Paper | Status |
-|---|------|-------|--------|
-|   |      |       |        |
+Topics will be populated as the course progresses.

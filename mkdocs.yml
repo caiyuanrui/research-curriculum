@@ -91,26 +91,38 @@ extra_javascript:
 nav:
   - Home: index.md
   - Agent Course:
-    - agent/index.md
-    - "001: ReAct (Yao 2023)": agent/001-react-yao-2022.md
+    - agents/index.md
+    - Agent Architectures:
+      - agents/agent-architectures/index.md
+      - "ReAct (Yao 2023)": agents/agent-architectures/2022-10-06-react-yao-2022.md
   - Agentic RL:
     - agentic-rl/index.md
   - Multimodal Course:
     - multimodal/index.md
-    - "001: CLIP (Radford 2021)": multimodal/001-clip-radford-2021.md
-  - Diffusion Course:
-    - diffusion/index.md
-    - "001: Score Matching (Hyvarinen 2005)": diffusion/001-score-matching-hyvarinen-2005.md
-    - "002: DAE to SM Connection (Vincent 2011)": diffusion/002-vincent-2011.md
+    - VLM Pretraining:
+      - multimodal/vlm-pretraining/index.md
+      - "CLIP (Radford 2021)": multimodal/vlm-pretraining/2021-02-26-clip-radford-2021.md
+  - Generative Models:
+    - generative-models/index.md
+    - Score-Based Models:
+      - generative-models/score-based-models/index.md
+      - "Score Matching (Hyvarinen 2005)": generative-models/score-based-models/2026-06-03-score-matching-hyvarinen-2005.md
+      - "DAE to SM Connection (Vincent 2011)": generative-models/score-based-models/2026-06-03-dae-to-sm-connection-vincent-2011.md
   - LLM Systems:
-    - systems/index.md
-    - "001: Megatron-LM (Shoeybi 2019)": systems/001-megatron-lm-shoeybi-2019.md
+    - llm-systems/index.md
+    - Distributed Training:
+      - llm-systems/distributed-training/index.md
+      - "Megatron-LM (Shoeybi 2019)": llm-systems/distributed-training/2019-09-17-megatron-lm-shoeybi-2019.md
   - Lab Reports:
-    - labs/index.md
-    - "001: GPT-5.5 Technical Report": labs/001-gpt-5-5-technical-report.md
+    - lab-reports/index.md
+    - Weekly Lab Note:
+      - lab-reports/weekly-lab-note/index.md
+      - "GPT-5.5 Technical Report": lab-reports/weekly-lab-note/2026-04-23-gpt-5-5-technical-report.md
   - Cross-Domain Review:
-    - weekly-review/index.md
-    - "Cross-Domain Week 23": weekly-review/cross-domain-week-23.md
+    - cross-domain-summary/index.md
+    - Weekly Synthesis:
+      - cross-domain-summary/weekly-synthesis/index.md
+      - "Week 23": cross-domain-summary/weekly-synthesis/2026-06-06-weekly-synthesis.md
   - Timeline: timeline.md
   - Knowledge Graph: knowledge-graph.md
 

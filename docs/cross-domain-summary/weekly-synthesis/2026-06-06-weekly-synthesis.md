@@ -1,7 +1,7 @@
 ---
 title: "Cross-Domain Summary — Week 23"
 date: 2026-06-06
-course: "weekly-review"
+course: "cross-domain-summary"
 tags: [cross-domain, summary, week-23]
 ---
 

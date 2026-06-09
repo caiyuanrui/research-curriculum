@@ -4,9 +4,9 @@ authors: "OpenAI"
 year: 2026
 venue: "OpenAI Technical Report & System Card"
 date: 2026-04-23
-course: "labs"
+course: "research-lab-course"
 tags: [openai, llm, agentic-coding, safety, system-card, gpt-5.5]
-phase: "openai_q2_2026"
+phase: "weekly-lab-note"
 order: 1
 ---
 

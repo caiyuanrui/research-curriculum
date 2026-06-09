@@ -4,9 +4,9 @@ authors: Aapo Hyvärinen
 year: 2005
 venue: Journal of Machine Learning Research (JMLR), Vol. 6
 date: 2026-06-03
-course: diffusion
+course: "generative-models-course"
 tags: [score-matching, energy-based-models, classic]
-order: 1
+phase: "score-based-models"
 ---
 
 # Estimation of Non-Normalized Statistical Models by Score Matching
