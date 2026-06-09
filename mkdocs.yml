@@ -95,6 +95,7 @@ nav:
     - "001: ReAct (Yao 2023)": agent/001-react-yao-2022.md
   - Multimodal Course:
     - multimodal/index.md
+    - "001: CLIP (Radford 2021)": multimodal/001-clip-radford-2021.md
   - Diffusion Course:
     - diffusion/index.md
     - "001: Score Matching (Hyvarinen 2005)": diffusion/001-score-matching-hyvarinen-2005.md

@@ -6,4 +6,4 @@
 
 | # | Date | Paper | Status |
 |---|------|-------|--------|
-| — | — | *等待课程启动* | ⏳ |
+| 001 | 2021-02-26 | [Learning Transferable Visual Models From Natural Language Supervision (CLIP)](001-clip-radford-2021.md) | ✅ Read |

@@ -24,6 +24,13 @@
 - **FrontierMath** ([GPT-5.5 Tech Report](labs/001-gpt-5-5-technical-report.md)) — 35.4% on Tier 4 math problems; discovered new Ramsey number proof
 - **Multiturn Jailbreak Evaluation** ([GPT-5.5 Tech Report](labs/001-gpt-5-5-technical-report.md)) — Novel adversary simulation protocol replacing StrongReject
 
+### multimodal
+- **Contrastive Vision-Language Pretraining** ([CLIP 2021](multimodal/001-clip-radford-2021.md)) — Train dual encoders (image + text) with contrastive loss on 400M image-text pairs for zero-shot transfer
+- **Zero-shot Image Classification** ([CLIP 2021](multimodal/001-clip-radford-2021.md)) — Use natural language prompts as classifiers without any dataset-specific training
+- **Dual-Encoder Architecture** ([CLIP 2021](multimodal/001-clip-radford-2021.md)) — Separate image encoder (ResNet/ViT) and text encoder (Transformer) aligned via cosine similarity
+- **Prompt Engineering for Vision** ([CLIP 2021](multimodal/001-clip-radford-2021.md)) — Template-based prompting ("a photo of a {class}") significantly improves zero-shot accuracy
+- **InfoNCE Contrastive Loss** ([CLIP 2021](multimodal/001-clip-radford-2021.md)) — Symmetric cross-entropy over N×N similarity matrix with learned temperature τ
+
 ## Cross-Course Connections
 
 - **Model Parallelism → Large-scale Training** — The scaling techniques pioneered in Megatron-LM (tensor parallelism) are prerequisites for training the massive diffusion models covered in the diffusion course, enabling multi-billion parameter vision models

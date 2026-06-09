@@ -9,3 +9,4 @@
 | 2026-06-04 | llm-systems | [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](systems/001-megatron-lm-shoeybi-2019.md) | 2019 |
 | 2026-06-05 | labs | [GPT-5.5 Technical Report](labs/001-gpt-5-5-technical-report.md) | 2026 |
 | 2026-06-08 | agent | [ReAct: Synergizing Reasoning and Acting in Language Models](agent/001-react-yao-2022.md) | 2023 |
+| 2026-06-09 | multimodal | [Learning Transferable Visual Models From Natural Language Supervision (CLIP)](multimodal/001-clip-radford-2021.md) | 2021 |
