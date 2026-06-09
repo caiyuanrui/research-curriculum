@@ -1,5 +1,5 @@
-site_name: Research Curriculum
-site_description: 系统性的研究学习笔记 — 每日一篇论文，追踪 AI 各领域发展脉络
+site_name: AI Tour
+site_description: 每日一篇论文，追踪 AI 各领域发展脉络
 site_url: https://caiyuanrui.github.io/research-curriculum
 repo_url: https://github.com/caiyuanrui/research-curriculum
 edit_uri: blob/main/docs/
@@ -106,10 +106,11 @@ nav:
   - Lab Reports:
     - labs/index.md
     - "001: GPT-5.5 Technical Report": labs/001-gpt-5-5-technical-report.md
-  - Weekly Review:
+  - Agentic RL:
+    - agentic-rl/index.md
+  - Cross-Domain Review:
     - weekly-review/index.md
     - "Cross-Domain Week 23": weekly-review/cross-domain-week-23.md
-    - "Weekly Review Week 23": weekly-review/weekly-week-23.md
   - Timeline: timeline.md
   - Knowledge Graph: knowledge-graph.md
 
