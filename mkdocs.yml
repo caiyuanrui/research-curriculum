@@ -93,6 +93,8 @@ nav:
   - Agent Course:
     - agent/index.md
     - "001: ReAct (Yao 2023)": agent/001-react-yao-2022.md
+  - Agentic RL:
+    - agentic-rl/index.md
   - Multimodal Course:
     - multimodal/index.md
     - "001: CLIP (Radford 2021)": multimodal/001-clip-radford-2021.md
@@ -106,8 +108,6 @@ nav:
   - Lab Reports:
     - labs/index.md
     - "001: GPT-5.5 Technical Report": labs/001-gpt-5-5-technical-report.md
-  - Agentic RL:
-    - agentic-rl/index.md
   - Cross-Domain Review:
     - weekly-review/index.md
     - "Cross-Domain Week 23": weekly-review/cross-domain-week-23.md
