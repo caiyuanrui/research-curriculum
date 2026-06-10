@@ -6,13 +6,13 @@ Topic: policy-gradient
 Paper: John Schulman, Sergey Levine, Philipp Moritz, Michael I. Jordan, Pieter Abbeel / ICML 2015  
 Link: https://arxiv.org/abs/1502.05477
 
-## Why this paper today?
-
-TRPO is the direct descendant of the Policy Gradient Theorem that solved the step-size problem. It introduced **constrained policy updates** — an idea that PPO later simplified and that RLHF inherits. Understanding TRPO explains why RLHF uses KL penalties, not gradient clipping.
-
 ## Core problem
 
-Policy gradient methods are sensitive to step size. Too small → slow convergence. Too large → the policy collapses, sample efficiency drops, and the training destabilizes. Standard gradient descent with a fixed learning rate does not respect the **geometry** of the policy parameter space.
+Policy gradient methods are sensitive to step size. Too small → slow convergence. Too large → the policy collapses, sample efficiency drops, and training destabilizes. Standard gradient descent with a fixed learning rate does not respect the **geometry** of the policy parameter space.
+
+## Historical context
+
+By 2015, the Policy Gradient Theorem (Sutton et al., 2000) was well-established, and deep RL had just seen breakthroughs with DQN (Mnih et al., 2013/2015). But DQN was value-based. Policy gradient methods — REINFORCE, actor-critic — could handle stochastic policies and continuous actions, yet were notoriously brittle. Natural Policy Gradient (Kakade, 2002) proposed using the Fisher information matrix to account for policy geometry, but required expensive second-order computations. The field needed a practical algorithm that combined the stability of natural gradients with the scalability of deep neural networks.
 
 ## Main idea
 
@@ -52,26 +52,24 @@ The constraint is on the **average** KL (not max), estimated from samples. Optim
 - **Single-path**: standard trajectory rollouts (model-free).
 - **Vine**: generates rollouts from a set of states, branching multiple actions per state (lower variance, needs state reset).
 
-## Key results
+## Research takeaway
 
-- Demonstrated monotonic improvement on robotic locomotion (swimming, hopping, walking) and Atari games with neural network policies.
-- Robust across tasks with minimal hyperparameter tuning — the KL constraint $\delta$ is far easier to set than a learning rate.
-- The vine variant outperformed single-path on harder tasks due to better advantage estimates.
+Constraining policy updates with KL divergence — rather than trusting a fixed learning rate — is the key to stable deep RL training. The theoretical monotonic improvement guarantee is approximate in practice, but the empirical stability it provides is transformative.
 
-## Limitations
+## Influence
 
-- The KL constraint is on **average** KL, not the pointwise bound from theory — the monotonic guarantee is approximate in practice.
-- Conjugate gradient + line search adds implementation complexity.
-- Second-order optimization (Fisher-vector products) is computationally expensive for very large models.
-- Does not scale directly to LLM-sized policies (billions of parameters) — this is why PPO was adopted for RLHF instead.
+TRPO was the bridge between theoretical natural gradient methods and practical deep RL. Its direct descendants include:
+- **PPO** (Schulman et al., 2017) — replaces the second-order KL constraint with a first-order clipped surrogate, making it far simpler and equally effective.
+- **ACKTR** (Wu et al., 2017) — uses Kronecker-factored approximation to scale natural gradients.
+- **MPO** (Abdolmaleki et al., 2018) — applies trust regions in the context of maximum a posteriori policy optimization.
+- **RLHF** — the KL penalty in the PPO-ptx objective used by InstructGPT and subsequent LLM alignment methods is a direct instantiation of TRPO's trust region idea: keep the fine-tuned model close to the reference model.
 
-## Connection to this course
+TRPO also set a standard for rigorous evaluation in RL — its experimental methodology (multiple random seeds, standardized environments, careful hyperparameter reporting) became the norm.
 
-TRPO's constrained update philosophy lives on in every modern RL algorithm used for agent training. PPO (next in our reading list) is the simplified first-order approximation. In RLHF, the KL penalty in the PPO objective (keeping the fine-tuned LM close to the reference model) is a direct descendant of TRPO's trust region — preventing the policy from collapsing after a bad reward signal.
+## Modern perspective
 
-## Notes for future reading
+TRPO's main practical limitation is complexity: conjugate gradient + Fisher-vector products + line search is heavy compared to PPO's simple clipping. This is why PPO, not TRPO, became the standard for both deep RL and LLM alignment.
 
-- PPO (Schulman et al., 2017) — replaces the constraint with a clipped surrogate; far simpler, equally effective.
-- Natural Policy Gradient (Kakade, 2002) — the algorithmic precursor using Fisher information as the metric.
-- GAE (Schulman et al., 2016) — how advantage estimation interacts with trust region methods.
-- RLHF reward model training — why separate reward models and KL penalties are needed when applying these algorithms to language models.
+The average-KL constraint also deviates from the theory (which requires pointwise $D_{KL}^{\max}$), meaning the monotonic guarantee is approximate. In practice, the constraint threshold $\delta$ still needs tuning — though much less than a learning rate.
+
+For LLM-scale models, second-order methods remain impractical, and PPO's clipped surrogate dominates. However, TRPO's core insight — that constraining policy divergence prevents collapse — is now embedded in almost every modern policy optimization algorithm, including methods that don't explicitly compute KL. Its legacy is more conceptual than algorithmic: **update the policy, but don't let it stray too far.**

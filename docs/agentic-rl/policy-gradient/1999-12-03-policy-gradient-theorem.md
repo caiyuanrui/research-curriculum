@@ -6,13 +6,13 @@ Topic: policy-gradient
 Paper: Richard S. Sutton, David McAllester, Satinder Singh, Yishay Mansour / NeurIPS 1999  
 Link: https://papers.nips.cc/paper/1713-policy-gradient-methods-for-reinforcement-learning-with-function-approximation
 
-## Why this paper today?
-
-This is the foundational paper for all policy gradient methods used in modern RLHF (InstructGPT, RLHF for LLMs). Understanding the Policy Gradient Theorem is a prerequisite for everything else in this course.
-
 ## Core problem
 
-Value-function-based RL (Q-learning, Sarsa, DP) with function approximation has no convergence guarantees — small changes in estimated values can cause discontinuous policy switches, making the optimization path unstable. The field needed a principled way to optimize policies directly.
+Value-function-based RL (Q-learning, Sarsa, dynamic programming) with function approximation has no convergence guarantees — small changes in estimated values can cause discontinuous policy switches, making the optimization path unstable. The field needed a principled way to optimize policies directly.
+
+## Historical context
+
+Throughout the 1990s, RL research was dominated by the value-function approach: approximate a value function, then derive a greedy policy from it. But Bertsekas & Tsitsiklis (1996), Baird (1995), and Gordon (1995/1996) showed that Q-learning and Sarsa can fail to converge even for simple MDPs with simple function approximators. Williams' REINFORCE (1992) offered a Monte Carlo policy gradient with unbiased estimates but suffered from high variance and had no convergence theory for function approximation. The gap: a principled gradient-based method with convergence guarantees.
 
 ## Main idea
 
@@ -37,25 +37,22 @@ $$
 
 then using $f_w$ in place of $Q^\pi$ still gives the true gradient. This bridges REINFORCE (high variance, unbiased) and actor-critic (lower variance, but biased) — a properly compatible critic eliminates the bias.
 
-## Key results
+## Research takeaway
 
-- First convergence proof for policy iteration with **arbitrary differentiable function approximation** to a locally optimal policy.
-- The gradient does not need to differentiate through state dynamics — a breakthrough that made policy gradient methods practical.
-- Compatible function approximation theoretically justifies using learned value functions (critics) without introducing bias.
+The gradient of expected reward can be estimated without differentiating through environment dynamics — only the policy's own parameters need gradients. Combined with compatible function approximation, this makes policy gradient methods both principled and practical for complex policies.
 
-## Limitations
+## Influence
 
-- The compatible condition is restrictive — in practice, people just use a separate value network anyway, and the empirical bias is acceptable.
-- Convergence is to a **local** optimum only.
-- Analysis assumes the policy is **differentiable** everywhere; discrete action distributions (softmax) satisfy this, but the gradient variance can still be high.
+This paper was the first to prove convergence of policy iteration with arbitrary differentiable function approximators. It established the theoretical foundation for:
+- **Actor-critic methods** (Konda & Tsitsiklis, 2000) — using learned value functions as critics.
+- **Natural Policy Gradient** (Kakade, 2002) — adding geometric awareness to the gradient direction.
+- **TRPO** (Schulman et al., 2015) and **PPO** (Schulman et al., 2017) — stable policy updates with trust regions.
+- **RLHF** (InstructGPT, 2022) — fine-tuning language models by treating the LM as a policy and human preferences as reward.
 
-## Connection to this course
+Every policy gradient algorithm in use today — from robotics to LLM alignment — traces its lineage back to this theorem.
 
-This paper is the theoretical bedrock. Every subsequent method in this course — TRPO, PPO, GAE, and ultimately RLHF — derives from this theorem. When InstructGPT uses PPO to fine-tune language models, it is directly applying the principle: "parameterize the policy, collect experience, estimate the gradient of expected reward, update."
+## Modern perspective
 
-## Notes for future reading
+The compatible function approximation condition (Theorem 2) is restrictive: it requires the critic features to align with the policy parameterization in a specific way. In practice, modern actor-critic methods (A2C, PPO, SAC) simply use a separate value network without enforcing compatibility — the empirical bias is small enough to ignore, and the simplicity gain is large.
 
-- REINFORCE (Williams, 1992) — the original Monte Carlo policy gradient; unbiased but high variance.
-- Actor-Critic methods (Konda & Tsitsiklis, 2000) — using a learned value function to reduce variance.
-- Natural Policy Gradient (Kakade, 2002) — next paper in this reading list; addresses the "how big a step" question.
-- The discount factor $\gamma$ and horizon tradeoff in advantage estimation.
+The core theorem itself has held up flawlessly. It is now taught as standard material in graduate RL courses (e.g., Sutton & Barto, Chapter 13) and is implemented in every major RL library (Stable-Baselines3, Ray RLlib, CleanRL). The main practical limitation is variance — Monte Carlo gradient estimates can be noisy, which is why subsequent work (GAE, TD($\lambda$), n-step returns) focused on variance reduction rather than changing the theorem.
