@@ -97,6 +97,10 @@ nav:
       - "ReAct (Yao 2023)": agents/agent-architectures/2022-10-06-react-yao-2022.md
   - Agentic RL:
     - agentic-rl/index.md
+    - Policy Gradient Foundations:
+      - agentic-rl/policy-gradient/index.md
+      - "Policy Gradient Theorem (Sutton 2000)": agentic-rl/policy-gradient/1999-12-03-policy-gradient-theorem.md
+      - "TRPO (Schulman 2015)": agentic-rl/policy-gradient/2015-02-19-trust-region-policy-optimization.md
   - Multimodal Course:
     - multimodal/index.md
     - VLM Pretraining:
