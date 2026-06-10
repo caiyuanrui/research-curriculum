@@ -106,6 +106,7 @@ nav:
     - VLM Pretraining:
       - multimodal/vlm-pretraining/index.md
       - "CLIP (Radford 2021)": multimodal/vlm-pretraining/2021-02-26-clip-radford-2021.md
+      - "ALIGN (Jia 2021)": multimodal/vlm-pretraining/2021-02-11-align-jia-2021.md
   - Generative Models:
     - generative-models/index.md
     - Score-Based Models:
